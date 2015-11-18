@@ -25,6 +25,7 @@ class AudioViewController: UIViewController {
         let ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("spaceman", ofType: "mp3")!)
         do {
             try ButtonAudioPlayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
+            print("hey there babe")
         } catch {
             
         }
