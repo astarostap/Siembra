@@ -26,6 +26,7 @@ class AudioViewController: UIViewController {
         do {
             try ButtonAudioPlayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
             print("hey there babe")
+            print("hey quentin")
         } catch {
             
         }
