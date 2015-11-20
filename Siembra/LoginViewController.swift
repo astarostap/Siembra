@@ -53,13 +53,12 @@ class LoginViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                     return
                 }
-                print("userrrrr")
-                print(user?.email)
-                print("Current user token=\(FBSDKAccessToken.currentAccessToken().tokenString)")
-                print("Current user id \(FBSDKAccessToken.currentAccessToken().userID)")
-                
                 if (FBSDKAccessToken.currentAccessToken() != nil) {
                     //segue
+                    print("userrrrr")
+                    print(user?.email)
+                    print("Current user token=\(FBSDKAccessToken.currentAccessToken().tokenString)")
+                    print("Current user id \(FBSDKAccessToken.currentAccessToken().userID)")
                     self.performSegueWithIdentifier("SuccessfullLogin", sender: sender)
                 }
             }

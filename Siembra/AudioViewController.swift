@@ -12,32 +12,36 @@ import AVFoundation
 class AudioViewController: UIViewController {
 
     @IBOutlet weak var PausePlay: UIButton!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var textView: UITextView!
     
     var ButtonAudioPlayer = AVAudioPlayer()
-    
-    
-    @IBOutlet weak var StoryText: UILabel!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("spaceman", ofType: "mp3")!)
         do {
             try ButtonAudioPlayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
-            print("hey there babe")
-            print("hey quentin")
+            NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "updateProgressView", userInfo: nil, repeats: true)
         } catch {
             
         }
         
         do {
-            let text = try NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("sample", ofType: "txt")!, encoding: NSUTF8StringEncoding)
-            StoryText.text = text as String
+            let text = try NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("sample_story", ofType: "txt")!, encoding: NSUTF8StringEncoding)
+            let attributedString:NSAttributedString = NSAttributedString(string: text as String)
+            textView.attributedText = attributedString
         } catch {
             
         }
         
+    }
+    
+    func updateProgressView() {
+        let currTime = ButtonAudioPlayer.currentTime
+        let totalTime = ButtonAudioPlayer.duration
+        let percentage = currTime / totalTime
+        progressView.progress = Float(percentage)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,29 +50,31 @@ class AudioViewController: UIViewController {
     }
     
 
-    @IBAction func PlayAudio1(sender: UIButton) {
-        ButtonAudioPlayer.play()
-    }
-    
-    @IBAction func Stop(sender: UIButton) {
-        ButtonAudioPlayer.stop()
-        ButtonAudioPlayer.currentTime = 0
-    }
-    
-    @IBAction func Restart(sender: UIButton) {
-        ButtonAudioPlayer.stop()
-        ButtonAudioPlayer.currentTime = 0
-        ButtonAudioPlayer.play()
-        PausePlay.setTitle("Pause", forState: UIControlState.Normal)
-    }
+//    @IBAction func PlayAudio1(sender: UIButton) {
+//        ButtonAudioPlayer.play()
+//    }
+//    
+//    @IBAction func Stop(sender: UIButton) {
+//        ButtonAudioPlayer.stop()
+//        ButtonAudioPlayer.currentTime = 0
+//    }
+//    
+//    @IBAction func Restart(sender: UIButton) {
+//        ButtonAudioPlayer.stop()
+//        ButtonAudioPlayer.currentTime = 0
+//        ButtonAudioPlayer.play()
+//        PausePlay.setTitle("Pause", forState: UIControlState.Normal)
+//    }
     
     @IBAction func PausePlay(sender: UIButton) {
         if (ButtonAudioPlayer.playing == true) {
             ButtonAudioPlayer.stop()
             PausePlay.setTitle("Play", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "rsz_1play_button.png"), forState: .Normal)
         } else {
             ButtonAudioPlayer.play()
             PausePlay.setTitle("Pause", forState: UIControlState.Normal)
+            PausePlay.setImage(UIImage(named: "rsz_pause.png"), forState: .Normal)
         }
     }
     
