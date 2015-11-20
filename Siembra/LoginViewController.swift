@@ -40,8 +40,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //From https://www.youtube.com/watch?v=Iqu1bZcUnW0
-    @IBAction func SignInButtonTapped(sender: UIButton) {
+    @IBAction func SignIn(sender: UIButton) {
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"],
             block: { (user: PFUser?, error: NSError?) -> Void in
                 if (error != nil) {
