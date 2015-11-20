@@ -13,40 +13,10 @@ import FBSDKLoginKit
 class SearchTableViewController: UITableViewController {
     
     func getParseStoriesLiked(username: String) {
-        let query: PFQuery = PFQuery(className: "_User")
-        query.findObjectsInBackgroundWithBlock { (users: [PFObject]?, error: NSError?) ->
-            Void in
-            if error == nil && users != nil {
-                print(users)
-                for user in users! {
-                    print(user["username"] as! String)
-                }
-            } else {
-                print(error)
-            }
-        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getParseStoriesLiked("username")
-//        let testObject = PFObject(className: "Story")
-//        testObject["text"] = "hello this is a sexual story"
-//        testObject["author"] = "autor abraham benguigui"
-//        
-//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            print("Object has been saved.")
-//        }
-        
-//        let storyUserObj = PFObject(className: "UserStory")
-//        storyUserObj["storyId"] = testObject.objectId
-//        storyUserObj["username"] = FBSDKAccessToken.currentAccessToken().userID
-//        storyUserObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            print("Object has been saved.")
-//        }
-
-        
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
