@@ -166,14 +166,41 @@
         <scene sceneID="6kl-PY-3QL">
             <objects>
                 <viewController storyboardIdentifier="Login" id="TSY-AX-S9R" customClass="LoginViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JKj-MX-GDz">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ir6-iv-fbE"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcN-Mw-HL1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1xv-Mf-TmN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <navigationItem key="navigationItem" title="Sign in" id="2va-KO-5m0"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuO-EZ-cmC">
+                                <rect key="frame" x="137" y="237" width="47" height="30"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="SignIn:" destination="TSY-AX-S9R" eventType="touchUpInside" id="6Kc-Xl-ktv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 and older" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-zK-6IS">
+                                <rect key="frame" x="113" y="312" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="X7y-lA-E76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zcN-Mw-HL1" firstAttribute="top" secondItem="aH3-zK-6IS" secondAttribute="bottom" constant="235" id="6KS-ho-ZI0"/>
+                            <constraint firstItem="aH3-zK-6IS" firstAttribute="centerX" secondItem="1xv-Mf-TmN" secondAttribute="centerX" id="Cr4-Ih-hbk"/>
+                            <constraint firstItem="aH3-zK-6IS" firstAttribute="centerX" secondItem="VuO-EZ-cmC" secondAttribute="centerX" id="OUU-n3-1Pn"/>
+                            <constraint firstItem="aH3-zK-6IS" firstAttribute="top" secondItem="VuO-EZ-cmC" secondAttribute="bottom" constant="45" id="VLx-fj-yw5"/>
+                            <constraint firstItem="aH3-zK-6IS" firstAttribute="leading" secondItem="1xv-Mf-TmN" secondAttribute="leadingMargin" constant="97" id="dxK-un-yyS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign in" id="dFm-Pd-XaO"/>
                     <connections>
                         <segue destination="zfA-Vp-GSm" kind="modal" identifier="SuccessfullLogin" id="aIE-0S-GBl"/>
                     </connections>
