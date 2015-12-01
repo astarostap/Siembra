@@ -11,6 +11,9 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class HomeCollectionViewController: UICollectionViewController {
+    
+    var tableTitles: [String] = ["Classic", "Sexy"]
+    var tableImages: [String] = ["rsz_classic.jpeg", "rsz_sexy.jpeg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +52,16 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return tableTitles.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("HomeCell", forIndexPath: indexPath) as! HomeCollectionViewCell
+        cell.label.text = tableTitles[indexPath.row]
+        cell.image.image = UIImage(named: tableImages[indexPath.row])!
     
         // Configure the cell
-    
+        
         return cell
     }
 

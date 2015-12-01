@@ -19,6 +19,7 @@
 		0828A2151BFADD4C009E0EF9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */; };
 		08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08E8A0AB1BFEA0F7004261BF /* sample_story.txt */; settings = {ASSET_TAGS = (); }; };
 		08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		08F1EBC81BF9C30F00567E48 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC11BF9C30F00567E48 /* Bolts.framework */; };
 		08F1EBC91BF9C30F00567E48 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC21BF9C30F00567E48 /* Parse.framework */; };
 		08F1EBCA1BF9C30F00567E48 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC31BF9C30F00567E48 /* ParseCrashReporting.framework */; };
@@ -60,6 +61,7 @@
 		0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		08E8A0AB1BFEA0F7004261BF /* sample_story.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_story.txt; path = ../../Documents/siembra/sample_story.txt; sourceTree = "<group>"; };
 		08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		08F1EBC11BF9C30F00567E48 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Siembra/Bolts.framework; sourceTree = "<group>"; };
 		08F1EBC21BF9C30F00567E48 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Siembra/Parse.framework; sourceTree = "<group>"; };
 		08F1EBC31BF9C30F00567E48 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Siembra/ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0828A20B1BFACA57009E0EF9 /* Supporting Files */,
 				0827B2521BF94D0600615A18 /* AppDelegate.swift */,
 				0827B2561BF94D0600615A18 /* Main.storyboard */,
+				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
 				08F2D7051BFAF465001E4513 /* LoginViewController.swift */,
 				08F2D7071BFAF830001E4513 /* LogoutViewController.swift */,
@@ -299,6 +302,7 @@
 				0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */,
 				0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */,
 				08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */,
+				08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */,
 				08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */,
 				0827B2651BF9B81C00615A18 /* HomeViewController.swift in Sources */,
 				0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */,
