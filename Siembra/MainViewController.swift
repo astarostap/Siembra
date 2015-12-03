@@ -119,8 +119,11 @@ class MainViewController: UITabBarController {
                 // Check if database is well populated
                 // Users (2)
                 let request1 = NSFetchRequest(entityName: "User")
-                if let users = (try? context.executeFetchRequest(request1)) {
+                if let users = (try? context.executeFetchRequest(request1)) as? [User] {
                     print("Number of Users: \(users.count)")
+                    for user in users {
+                        print("Stories: \(user.publications)")
+                    }
                 }
                 // Stories (6)
                 let request2 = NSFetchRequest(entityName: "Story")
@@ -207,6 +210,7 @@ class MainViewController: UITabBarController {
                     story.storyDescription = self.storiesToInfo[textFileName]!["storyDescription"]
                     if self.storiesToInfo[textFileName]!["isCompleted"] == "true" { story.isCompleted = true} else { story.isCompleted = false }
                     story.narratorName = self.storiesToInfo[textFileName]!["narratorName"]
+                    story.writer = User.findUser(users[0], inManagedObjectContext: context)
                     
                     //print("storyText: \(story.text)")
                     //print("storyTitle: \(story.title)")
@@ -233,6 +237,8 @@ class MainViewController: UITabBarController {
                     story.storyDescription = self.storiesToInfo[textFileName]!["storyDescription"]
                     if self.storiesToInfo[textFileName]!["isCompleted"] == "true" { story.isCompleted = true} else { story.isCompleted = false }
                     story.narratorName = self.storiesToInfo[textFileName]!["narratorName"]
+                    story.writer = User.findUser(users[1], inManagedObjectContext: context)
+
                     
                     //print("storyText: \(story.text)")
                     //print("storyTitle: \(story.title)")
@@ -259,6 +265,8 @@ class MainViewController: UITabBarController {
             }
         }
     }
+
+
     
     
     /*
