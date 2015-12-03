@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="2429" y="-453"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="eZQ-Q1-icK">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" customClass="TabBarViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" customClass="MainViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mIX-tP-xjg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eRv-ff-0Tz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -484,7 +484,7 @@
         <!--Settings-->
         <scene sceneID="zmr-Xh-Wje">
             <objects>
-                <viewController id="mTx-P8-NRo" customClass="SettingsViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="mTx-P8-NRo" customClass="SettingsViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="toP-o3-tcb"/>
                         <viewControllerLayoutGuide type="bottom" id="yFb-jL-dvC"/>
