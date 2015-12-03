@@ -100,10 +100,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    
     // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "uk.co.plymouthsoftware.core_data" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "edu.stanford.cs193p.qperrot.Test" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
@@ -115,10 +116,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
+        // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Siembra.sqlite")
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
             try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
@@ -138,6 +139,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return coordinator
     }()
+    
+    class var managedObjectContext: NSManagedObjectContext? {
+        return ((UIApplication.sharedApplication().delegate) as? AppDelegate)?.managedObjectContext
+    }
     
     lazy var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.

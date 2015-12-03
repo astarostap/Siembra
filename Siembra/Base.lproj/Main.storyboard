@@ -12,6 +12,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9pz-CC-ym9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pPe-Hd-eoX">
                             <size key="itemSize" width="100" height="100"/>
@@ -29,19 +30,23 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL5-ON-h2b">
                                             <rect key="frame" x="0.0" y="69" width="100" height="31"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djM-Yp-ZFo">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="ljh-cu-ePG"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="kL5-ON-h2b" secondAttribute="bottom" id="4pg-im-HH9"/>
@@ -228,6 +233,7 @@
                     <view key="view" contentMode="scaleToFill" id="0xq-Cl-xp5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Story" id="2mI-hq-rXQ"/>
@@ -286,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="203" y="-457"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="eZQ-Q1-icK">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" customClass="MainViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mIX-tP-xjg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eRv-ff-0Tz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
