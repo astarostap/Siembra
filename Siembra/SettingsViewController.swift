@@ -11,13 +11,9 @@ import FBSDKLoginKit
 import Parse
 import ParseFacebookUtilsV4
 
-class LogoutViewController: UIViewController {
+class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,14 +22,26 @@ class LogoutViewController: UIViewController {
     
 
     @IBAction func SignOutButtonTapped(sender: UIButton) {
-        PFUser.logOutInBackgroundWithBlock {(error: NSError?) -> Void in
-            let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("Login") as UIViewController!
-            let loginPageNav = UINavigationController(rootViewController: loginPage)
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.window?.rootViewController = loginPageNav
-            
-            
-        }
+        self.performSegueWithIdentifier("SignIn", sender: sender)
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        print("User Logged In")
+        self.performSegueWithIdentifier("SuccessfullLogin", sender: nil)
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User Logged Out")
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var loginButton = FBSDKLoginButton()
+        loginButton.delegate = self
+        loginButton.frame = CGRectMake(100, 100, 150, 40)
+        self.view.addSubview(loginButton)
+        
     }
     
     /*

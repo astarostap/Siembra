@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2521BF94D0600615A18 /* AppDelegate.swift */; };
-		0827B2581BF94D0600615A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B2561BF94D0600615A18 /* Main.storyboard */; };
 		0827B25A1BF94D0600615A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0827B2591BF94D0600615A18 /* Assets.xcassets */; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
 		0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2661BF9B85500615A18 /* YourLikesViewController.swift */; };
@@ -16,10 +15,14 @@
 		0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */; };
 		0828A2101BFACBD8009E0EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */; };
 		0828A2151BFADD4C009E0EF9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */; };
-		08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562D691C0E8251004A35FE /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08E8A0AB1BFEA0F7004261BF /* sample_story.txt */; settings = {ASSET_TAGS = (); }; };
-		08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562D691C0E8251004A35FE /* HomeViewController.swift */; };
+		086B9A951C10B78700F952BB /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A941C10B78700F952BB /* Genre.swift */; };
+		086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */; };
+		086B9A9A1C10BE9400F952BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086B9A981C10BE9400F952BB /* Main.storyboard */; };
+		086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */; };
+		08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08E8A0AB1BFEA0F7004261BF /* sample_story.txt */; };
+		08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */; };
+		08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */; };
 		08F1EBC81BF9C30F00567E48 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC11BF9C30F00567E48 /* Bolts.framework */; };
 		08F1EBC91BF9C30F00567E48 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC21BF9C30F00567E48 /* Parse.framework */; };
 		08F1EBCA1BF9C30F00567E48 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBC31BF9C30F00567E48 /* ParseCrashReporting.framework */; };
@@ -38,8 +41,7 @@
 		08F1EBE21BF9C3CF00567E48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */; };
 		08F1EBE41BF9C3D700567E48 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE31BF9C3D700567E48 /* Accounts.framework */; };
 		08F1EBE61BF9C3E100567E48 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE51BF9C3E100567E48 /* Social.framework */; };
-		08F2D7061BFAF465001E4513 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2D7051BFAF465001E4513 /* LoginViewController.swift */; };
-		08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2D7071BFAF830001E4513 /* LogoutViewController.swift */; };
+		08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2D7071BFAF830001E4513 /* SettingsViewController.swift */; };
 		4A97B95A1BFD208100FA0D9B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9571BFD208100FA0D9B /* FBSDKCoreKit.framework */; };
 		4A97B95B1BFD208100FA0D9B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9581BFD208100FA0D9B /* FBSDKLoginKit.framework */; };
 		4A97B95C1BFD208100FA0D9B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9591BFD208100FA0D9B /* FBSDKShareKit.framework */; };
@@ -49,7 +51,6 @@
 /* Begin PBXFileReference section */
 		0827B24F1BF94D0600615A18 /* Siembra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siembra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0827B2521BF94D0600615A18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0827B2571BF94D0600615A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0827B2591BF94D0600615A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0827B25C1BF94D0600615A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0827B25E1BF94D0600615A18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,10 @@
 		0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		08562D691C0E8251004A35FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		086B9A941C10B78700F952BB /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewGenreCell.swift; sourceTree = "<group>"; };
+		086B9A991C10BE9400F952BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		08E8A0AB1BFEA0F7004261BF /* sample_story.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_story.txt; path = ../../Documents/siembra/sample_story.txt; sourceTree = "<group>"; };
 		08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -80,8 +85,7 @@
 		08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		08F1EBE31BF9C3D700567E48 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08F1EBE51BF9C3E100567E48 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		08F2D7051BFAF465001E4513 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		08F2D7071BFAF830001E4513 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		08F2D7071BFAF830001E4513 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4A97B9571BFD208100FA0D9B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		4A97B9581BFD208100FA0D9B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		4A97B9591BFD208100FA0D9B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
@@ -145,16 +149,18 @@
 				0828A2161BFADE8A009E0EF9 /* Model */,
 				0828A20B1BFACA57009E0EF9 /* Supporting Files */,
 				0827B2521BF94D0600615A18 /* AppDelegate.swift */,
-				0827B2561BF94D0600615A18 /* Main.storyboard */,
+				086B9A941C10B78700F952BB /* Genre.swift */,
 				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
-				08F2D7051BFAF465001E4513 /* LoginViewController.swift */,
-				08F2D7071BFAF830001E4513 /* LogoutViewController.swift */,
+				08F2D7071BFAF830001E4513 /* SettingsViewController.swift */,
+				086B9A981C10BE9400F952BB /* Main.storyboard */,
+				086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */,
 				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
 				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
 				0827B2661BF9B85500615A18 /* YourLikesViewController.swift */,
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
 				08562D691C0E8251004A35FE /* HomeViewController.swift */,
+				086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
 			);
@@ -283,10 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */,
+				086B9A9A1C10BE9400F952BB /* Main.storyboard in Resources */,
 				0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */,
 				0827B25A1BF94D0600615A18 /* Assets.xcassets in Resources */,
 				0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */,
-				0827B2581BF94D0600615A18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,35 +303,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F2D7061BFAF465001E4513 /* LoginViewController.swift in Sources */,
 				0828A2151BFADD4C009E0EF9 /* SearchTableViewController.swift in Sources */,
 				0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */,
 				0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */,
-				08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */,
+				086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */,
+				08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */,
 				08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */,
+				086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */,
 				08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */,
 				08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */,
 				0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */,
+				086B9A951C10B78700F952BB /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0827B2561BF94D0600615A18 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0827B2571BF94D0600615A18 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0827B25C1BF94D0600615A18 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		086B9A981C10BE9400F952BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				086B9A991C10BE9400F952BB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
