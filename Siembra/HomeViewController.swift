@@ -2,15 +2,19 @@
 //  HomeViewController.swift
 //  Siembra
 //
-//  Created by Abraham Starosta on 11/15/15.
+//  Created by Abraham Starosta on 12/1/15.
 //  Copyright © 2015 Abraham Starosta. All rights reserved.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
+    
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -18,7 +22,6 @@ class HomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        print("hi")
         // Dispose of any resources that can be recreated.
     }
     
