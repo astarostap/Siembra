@@ -121,9 +121,6 @@ class MainViewController: UITabBarController {
                 let request1 = NSFetchRequest(entityName: "User")
                 if let users = (try? context.executeFetchRequest(request1)) as? [User] {
                     print("Number of Users: \(users.count)")
-                    for user in users {
-                        print("Stories: \(user.publications)")
-                    }
                 }
                 // Stories (6)
                 let request2 = NSFetchRequest(entityName: "Story")
