@@ -95,79 +95,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eAd-BK-kaV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FAl-JG-D9S">
-                                            <rect key="frame" x="0.0" y="72" width="320" height="383"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="5gE-U3-QRz">
-                                                <size key="itemSize" width="234" height="313"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                            <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ddx-sf-GuX">
-                                                    <rect key="frame" x="20" y="35" width="234" height="313"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="234" height="313"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="romance_ipc" translatesAutoresizingMaskIntoConstraints="NO" id="TFk-r5-N19">
-                                                                <rect key="frame" x="0.0" y="0.0" width="234" height="313"/>
-                                                            </imageView>
-                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5U-8u-iCz">
-                                                                <rect key="frame" x="0.0" y="246" width="234" height="67"/>
-                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zK7-TC-guy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="67"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w4-aY-jcj">
-                                                                            <rect key="frame" x="0.0" y="8" width="234" height="51"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="0w4-aY-jcj" firstAttribute="leading" secondItem="zK7-TC-guy" secondAttribute="leading" id="8md-0p-j6b"/>
-                                                                        <constraint firstItem="0w4-aY-jcj" firstAttribute="top" secondItem="zK7-TC-guy" secondAttribute="topMargin" id="C5b-J1-VLE"/>
-                                                                        <constraint firstItem="0w4-aY-jcj" firstAttribute="bottom" secondItem="zK7-TC-guy" secondAttribute="bottomMargin" id="Dmz-y7-iHQ"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="0w4-aY-jcj" secondAttribute="trailing" id="ZpA-Ha-CQh"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="67" id="7k4-UG-wkS"/>
-                                                                </constraints>
-                                                                <blurEffect style="extraLight"/>
-                                                            </visualEffectView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="TFk-r5-N19" secondAttribute="trailing" id="CmX-M7-hWo"/>
-                                                        <constraint firstItem="TFk-r5-N19" firstAttribute="top" secondItem="Ddx-sf-GuX" secondAttribute="top" id="Fat-Ns-BcB"/>
-                                                        <constraint firstItem="a5U-8u-iCz" firstAttribute="trailing" secondItem="TFk-r5-N19" secondAttribute="trailing" id="IvD-zI-5z7"/>
-                                                        <constraint firstAttribute="bottom" secondItem="TFk-r5-N19" secondAttribute="bottom" id="Jj2-2X-1DO"/>
-                                                        <constraint firstItem="TFk-r5-N19" firstAttribute="leading" secondItem="Ddx-sf-GuX" secondAttribute="leading" id="MVr-Qi-6os"/>
-                                                        <constraint firstItem="a5U-8u-iCz" firstAttribute="bottom" secondItem="TFk-r5-N19" secondAttribute="bottom" id="dXu-GE-E68"/>
-                                                        <constraint firstItem="a5U-8u-iCz" firstAttribute="leading" secondItem="TFk-r5-N19" secondAttribute="leading" id="njg-dY-MJA"/>
-                                                    </constraints>
-                                                </collectionViewCell>
-                                            </cells>
-                                            <connections>
-                                                <outlet property="dataSource" destination="baG-H3-TWf" id="HLE-ad-3i7"/>
-                                                <outlet property="delegate" destination="baG-H3-TWf" id="rGY-wN-ivE"/>
-                                            </connections>
-                                        </collectionView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="FAl-JG-D9S" secondAttribute="bottom" id="7Gv-wW-Gs9"/>
-                                        <constraint firstItem="FAl-JG-D9S" firstAttribute="leading" secondItem="eAd-BK-kaV" secondAttribute="leading" id="OIS-zY-v0O"/>
-                                        <constraint firstItem="FAl-JG-D9S" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" constant="72" id="kQm-r2-KQo"/>
-                                        <constraint firstAttribute="trailing" secondItem="FAl-JG-D9S" secondAttribute="trailing" id="rvk-R9-rk3"/>
-                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -189,10 +116,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I9o-pC-36X"/>
-                    <connections>
-                        <outlet property="backgroundImageView" destination="TFk-r5-N19" id="2VW-cC-f1w"/>
-                        <outlet property="collectionView" destination="FAl-JG-D9S" id="XW8-CC-rlo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qv-tW-sDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -566,7 +489,6 @@
     </scenes>
     <resources>
         <image name="home_background2" width="506" height="900"/>
-        <image name="romance_ipc" width="260" height="331"/>
         <image name="rsz_1play_button" width="60" height="60"/>
         <image name="rsz_settings-icon" width="25" height="25"/>
     </resources>
