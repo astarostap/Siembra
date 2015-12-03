@@ -9,20 +9,91 @@
 import UIKit
 import Parse
 import FBSDKLoginKit
+import CoreData
+import Foundation
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UISearchResultsUpdating  {
     
-    func getParseStoriesLiked(username: String) {
+    // Search elements array that contains 3 arrays where the first is users,
+    // second is stories, and third is characters
+    private var searchElements = [[AnyObject]]()
+    
+    
+    /////////////////////////////
+    /// Work to filter search ///
+    /////////////////////////////
+    
+    private var filteredSearchItems = [[AnyObject]]()
+    
+    private var resultSearchController = UISearchController()
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        // Filter the searchElements array using the filterMethod
+        filteredSearchItems.removeAll(keepCapacity: false)
+        if let searchText = searchController.searchBar.text {
+            print("searchText: \(searchText)")
+            
+            // Filter users
+            if var users = searchElements[0] as? [User] {
+                users = users.filter({( user: User) -> Bool in
+                    let stringMatch = user.name?.lowercaseString.rangeOfString(searchText)
+                    return stringMatch != nil
+                })
+                filteredSearchItems.append(users)
+            }
+            
+            // Filter stories
+            if var stories = searchElements[1] as? [Story] {
+                stories = stories.filter({( story: Story) -> Bool in
+                    let stringMatch = story.title?.lowercaseString.rangeOfString(searchText)
+                    return stringMatch != nil
+                })
+                filteredSearchItems.append(stories)
+            }
+            
+            // Filter Characters
+            if var characters = searchElements[2] as? [Character] {
+                characters = characters.filter({( character: Character) -> Bool in
+                    let stringMatch = character.name?.lowercaseString.rangeOfString(searchText)
+                    return stringMatch != nil
+                })
+                filteredSearchItems.append(characters)
+            }
+        }
+        // Update table
+        self.tableView.reloadData()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Load data into searchElements
+        if let context = AppDelegate.managedObjectContext {
+            //print("context: \(context)")
+            let request1 = NSFetchRequest(entityName: "User")
+            let request2 = NSFetchRequest(entityName: "Story")
+            let request3 = NSFetchRequest(entityName: "Character")
+            if let users = (try? context.executeFetchRequest(request1)) as? [User],
+                let stories = (try? context.executeFetchRequest(request2)) as? [Story],
+                let characters = (try? context.executeFetchRequest(request3)) as? [Character] {
+                    //print("Characters: \(characters)")
+                    searchElements.append(users)
+                    searchElements.append(stories)
+                    searchElements.append(characters)
+            }
+        }
+        
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            self.tableView.tableHeaderView = controller.searchBar
+            return controller
+        })()
+        
+        // Reload the table
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,25 +103,72 @@ class SearchTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if (self.resultSearchController.active) {
+            return filteredSearchItems.count
+        } else {
+            return searchElements.count
+        }
+    }
 
-    /*
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (self.resultSearchController.active) {
+            return filteredSearchItems[section].count
+        } else {
+            return searchElements[section].count
+        }
+    }
+
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        
+        // Chose the right array to populate the table view
+        var activeSearchArray = [[AnyObject]]()
+        if (self.resultSearchController.active) {
+            activeSearchArray = filteredSearchItems
+        } else {
+            activeSearchArray = searchElements
+        }
+                
+        // print("section: \(indexPath.section) row: \(indexPath.row)")
+        let searchItem = activeSearchArray[indexPath.section][indexPath.row]
+        //print("searchItem: \(searchItem)")
+        var cell = UITableViewCell()
+        switch indexPath.section {
+            // User
+            case 0:
+                if let user = searchItem as? User {
+                    cell = tableView.dequeueReusableCellWithIdentifier("searchResultCell", forIndexPath: indexPath)
+                    cell.textLabel?.text = user.name
+                    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                    let numberOfContributions = (user.contributions)!.count
+                    cell.detailTextLabel?.text = "A top Siembra user with \(numberOfContributions) contributions"
+                }
+            
+            // Story
+            case 1:
+                if let story = searchItem as? Story {
+                    cell = tableView.dequeueReusableCellWithIdentifier("searchResultCell", forIndexPath: indexPath)
+                    cell.textLabel?.text = story.title
+                    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                    cell.detailTextLabel?.text = story.storyDescription
+                }
+            
+            // Character 
+            case 2:
+                if let character = searchItem as? Character {
+                    cell = tableView.dequeueReusableCellWithIdentifier("searchResultCell", forIndexPath: indexPath)
+                    cell.textLabel?.text = character.name
+                    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                    let storyName = character.mainStory!.title
+                    cell.detailTextLabel?.text = "Character in \(storyName!)"
+                }
+            
+            default: break // do nothing
+        }
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
