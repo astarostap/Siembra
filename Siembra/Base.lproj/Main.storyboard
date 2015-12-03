@@ -292,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="203" y="-457"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="eZQ-Q1-icK">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="zfA-Vp-GSm" customClass="MainViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mIX-tP-xjg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eRv-ff-0Tz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
