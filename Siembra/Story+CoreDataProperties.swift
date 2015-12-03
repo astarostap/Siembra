@@ -2,7 +2,7 @@
 //  Story+CoreDataProperties.swift
 //  Siembra
 //
-//  Created by Quentin Perrot on 12/2/15.
+//  Created by Quentin Perrot on 12/3/15.
 //  Copyright © 2015 Abraham Starosta. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -22,11 +22,12 @@ extension Story {
     @NSManaged var narratorName: String?
     @NSManaged var storyDescription: String?
     @NSManaged var text: String?
-    @NSManaged var title: String?
     @NSManaged var textFileName: String?
+    @NSManaged var title: String?
     @NSManaged var characters: NSSet?
     @NSManaged var contributions: NSSet?
-    @NSManaged var storyFollowers: NSSet?
     @NSManaged var narrationFollowers: NSSet?
+    @NSManaged var storyFollowers: NSSet?
+    @NSManaged var writer: User?
 
 }
