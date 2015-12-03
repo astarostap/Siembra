@@ -17,5 +17,8 @@ extension User {
     @NSManaged var address: String?
     @NSManaged var id: NSNumber?
     @NSManaged var name: String?
+    @NSManaged var contributions: NSSet?
+    @NSManaged var storyLikes: NSSet?
+    @NSManaged var narrationPlaylist: NSSet?
 
 }

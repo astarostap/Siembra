@@ -23,5 +23,10 @@ extension Story {
     @NSManaged var storyDescription: String?
     @NSManaged var text: String?
     @NSManaged var title: String?
+    @NSManaged var textFileName: String?
+    @NSManaged var characters: NSSet?
+    @NSManaged var contributions: NSSet?
+    @NSManaged var storyFollowers: NSSet?
+    @NSManaged var narrationFollowers: NSSet?
 
 }

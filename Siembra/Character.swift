@@ -12,6 +12,13 @@ import CoreData
 
 class Character: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    // Given the character's name, return the Character Entity
+    class func findCharacter(characterName: String, inManagedObjectContext context: NSManagedObjectContext) -> Character? {
+        let request = NSFetchRequest(entityName: "Character")
+        request.predicate = NSPredicate(format: "name = %@", characterName)
+        if let character = (try? context.executeFetchRequest(request))?.first as? Character {
+            return character
+        }
+        return nil
+    }
 }

@@ -14,7 +14,9 @@ import CoreData
 
 extension Contribution {
 
-    @NSManaged var text: String?
     @NSManaged var submissionTime: NSDate?
+    @NSManaged var text: String?
+    @NSManaged var writer: User?
+    @NSManaged var mainStory: Story?
 
 }

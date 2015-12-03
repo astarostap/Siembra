@@ -12,6 +12,13 @@ import CoreData
 
 class Story: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    // Given the story's file name, return the Story entity
+    class func findStory(storyFileName: String, inManagedObjectContext context: NSManagedObjectContext) -> Story? {
+        let request = NSFetchRequest(entityName: "Story")
+        request.predicate = NSPredicate(format: "textFileName = %@", storyFileName)
+        if let story = (try? context.executeFetchRequest(request))?.first as? Story {
+            return story
+        }
+        return nil
+    }
 }

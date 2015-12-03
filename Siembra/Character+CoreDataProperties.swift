@@ -15,7 +15,8 @@ import CoreData
 extension Character {
 
     @NSManaged var image: String?
-    @NSManaged var personaDescription: String?
     @NSManaged var name: String?
+    @NSManaged var personaDescription: String?
+    @NSManaged var mainStory: Story?
 
 }

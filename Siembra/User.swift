@@ -12,6 +12,13 @@ import CoreData
 
 class User: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    // Given the user's name, returnt the User entity
+    class func findUser(userName: String, inManagedObjectContext context: NSManagedObjectContext) -> User? {
+        let request = NSFetchRequest(entityName: "User")
+        request.predicate = NSPredicate(format: "name = %@", userName)
+        if let user = (try? context.executeFetchRequest(request))?.first as? User {
+            return user
+        }
+        return nil
+    }
 }
