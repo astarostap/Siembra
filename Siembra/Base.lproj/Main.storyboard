@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="2155" y="434"/>
         </scene>
-        <!--Search-->
+        <!--Search Table View Controller-->
         <scene sceneID="121-4w-0WR">
             <objects>
                 <tableViewController id="YRh-oy-Sl1" customClass="SearchTableViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,15 +128,26 @@
                             <outlet property="delegate" destination="YRh-oy-Sl1" id="V24-rK-V7I"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="k65-Dw-blC">
-                        <barButtonItem key="rightBarButtonItem" image="rsz_settings-icon" id="EfY-rG-Po7">
+                    <navigationItem key="navigationItem" id="k65-Dw-blC">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="3" id="Gev-Qy-OF0">
+                            <rect key="frame" x="8" y="7" width="304" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <segments>
+                                <segment title="Users"/>
+                                <segment title="Stories"/>
+                                <segment title="Characters"/>
+                                <segment title="All"/>
+                            </segments>
                             <connections>
-                                <segue destination="mTx-P8-NRo" kind="push" id="Tm2-5D-EmA"/>
+                                <action selector="searchSegmentedControl:" destination="YRh-oy-Sl1" eventType="valueChanged" id="zZP-Hu-syu"/>
                             </connections>
-                        </barButtonItem>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Yzy-ME-LbS" id="JyY-6b-k3F"/>
+                        <outlet property="segmentedValue" destination="Gev-Qy-OF0" id="hpQ-L4-VCf"/>
                         <outlet property="tableView" destination="Zyd-F1-VeL" id="g6D-M1-qbH"/>
                     </connections>
                 </tableViewController>
@@ -486,6 +497,6 @@
         <image name="rsz_settings-icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tm2-5D-EmA"/>
+        <segue reference="bbc-UE-RZw"/>
     </inferredMetricsTieBreakers>
 </document>
