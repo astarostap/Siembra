@@ -54,7 +54,7 @@ class MainViewController: UITabBarController {
     // User Data
     private var users: [String] = ["Lisa", "Hannah"]
     
-    private var usersToAddress: [String: String] = ["Lisa": "address1", "Hannah": "address2"]
+    private var usersToAddress: [String: String] = ["Lisa": "Stanford, CA, USA", "Hannah": "Stanford, CA, USA"]
     
     // Story Data
     

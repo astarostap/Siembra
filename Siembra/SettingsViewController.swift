@@ -10,11 +10,57 @@ import UIKit
 import FBSDKLoginKit
 import Parse
 import ParseFacebookUtilsV4
+import MessageUI
 
-class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate  {
+class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate  {
 
+    
+    @IBOutlet var subject: UITextField!
 
-
+    @IBOutlet var message: UITextView!
+    
+    @IBAction func sendMessage(sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            let picker = MFMailComposeViewController()
+            picker.mailComposeDelegate = self
+            if let subjectTitle = subject.text,
+                let bodyMessage = message.text {
+                    picker.setSubject(subjectTitle)
+                    picker.setMessageBody(bodyMessage, isHTML: true)
+                    picker.setToRecipients(["qperrot@stanford.com"])
+                    self.presentViewController(picker, animated: true, completion: nil)
+            }
+        } else {
+            let cannotSendMailAlert = UIAlertController(title: "Cannot send Mail", message: "There is an issue with your device", preferredStyle:  UIAlertControllerStyle.Alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            cannotSendMailAlert.addAction(cancel)
+            self.presentViewController(cannotSendMailAlert, animated: true, completion: nil)
+        }
+    }
+    
+    // Using elements from this tutorial http://www.ioscreator.com/tutorials/send-email-tutorial-ios8-swift
+    // MFMailComposeViewControllerDelegate
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //UITextViewDelegate
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        message.text = textView.text
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,11 +83,16 @@ class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Login functions
         var loginButton = FBSDKLoginButton()
         loginButton.delegate = self
-        loginButton.frame = CGRectMake(100, 100, 150, 40)
+        loginButton.frame = CGRectMake(100, 400, 150, 40)
         self.view.addSubview(loginButton)
         
+        // Mail functions
+        subject.delegate = self
+        message.delegate = self
     }
     
     /*

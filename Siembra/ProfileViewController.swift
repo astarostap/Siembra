@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MapKit
+import CoreData
+import CoreLocation
 
-class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -17,7 +20,9 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var characteristicsLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addressLabel: UILabel!
+
     @IBAction func takePhoto(sender: UIButton) {
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -35,7 +40,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         imageView.image = image
         imageView.layer.cornerRadius = imageView.frame.width/2
         imageView.layer.masksToBounds = true
-        imageView.layer.borderWidth = 2
+        imageView.layer.borderWidth = 4
         imageView.layer.borderColor = UIColor.purpleColor().CGColor
     }
     
@@ -44,15 +49,37 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     private func setCharacteristics() {
-        characteristicsLabel.text = "PM at Twitter, dog lover, traveller."
+        characteristicsLabel.text = "PM at Twitter & dog lover"
     }
 
+    private func setupMap() {
+        
+        // Fetch address from Core Data
+        if let context = AppDelegate.managedObjectContext {
+            var address = ""
+            if let user = User.findUser("Lisa", inManagedObjectContext: context) {
+                address = user.address!
+                addressLabel.text = address
+            }
+            
+            // Create map
+            var placemark: CLPlacemark!
+            CLGeocoder().geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+                if error == nil {
+                    placemark = placemarks![0] as CLPlacemark
+                    self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location!.coordinate.latitude, placemark.location!.coordinate.longitude), MKCoordinateSpanMake(0.002, 0.002)), animated: true)
+                    self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+                }
+            })
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setImage()
         setName()
         setCharacteristics()
+        setupMap()
         // Do any additional setup after loading the view.
     }
     
@@ -63,14 +90,31 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "popOverSegue" {
+            if let popoverViewController = segue.destinationViewController as? PopoverViewController {
+                popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+                popoverViewController.popoverPresentationController!.delegate = self
+                if let context = AppDelegate.managedObjectContext {
+                    if let user = User.findUser("Lisa", inManagedObjectContext: context) {
+                        if let stories = user.publications!.allObjects as? [Story] {
+                            if let story = stories.first {
+                                popoverViewController.setStory(story.text)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-    */
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+
 
 }
