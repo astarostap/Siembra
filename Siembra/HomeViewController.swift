@@ -64,6 +64,8 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         if (collectionView.restorationIdentifier == "VideoCollectionView") {
+            print("col: " + String(indexPath.item
+                ))
             let cell = collectionView.cellForItemAtIndexPath(indexPath) as! HomeVideoCell
             performSegueWithIdentifier("videoSegue", sender: cell)
         } else {
@@ -75,6 +77,7 @@ extension HomeViewController: UICollectionViewDataSource {
         if let videoViewController = destinationvc as? YoutubeVideoViewController {
             if let cell = sender as? HomeVideoCell {
                 videoViewController.videoUrl = cell.videoUrl
+                videoViewController.videoTitleString = cell.videoTitle.text
             }
         }
     }

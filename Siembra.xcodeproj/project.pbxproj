@@ -10,7 +10,6 @@
 		0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2521BF94D0600615A18 /* AppDelegate.swift */; };
 		0827B2581BF94D0600615A18 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
-		0827B2651BF9B81C00615A18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2641BF9B81C00615A18 /* HomeViewController.swift */; };
 		0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2091BFAC951009E0EF9 /* AudioViewController.swift */; };
 		0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */; };
 		0828A2101BFACBD8009E0EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */; };
@@ -23,6 +22,8 @@
 		086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */; };
 		086B9A9A1C10BE9400F952BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086B9A981C10BE9400F952BB /* Main.storyboard */; };
 		086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */; };
+		088EE56E1C1203D800517975 /* StoryContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE56D1C1203D800517975 /* StoryContributionViewController.swift */; };
+		089475661C1153A300A107E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089475651C1153A300A107E0 /* SettingsViewController.swift */; };
 		08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08E8A0AB1BFEA0F7004261BF /* sample_story.txt */; };
 		08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */; };
 		08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */; };
@@ -44,7 +45,6 @@
 		08F1EBE21BF9C3CF00567E48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */; };
 		08F1EBE41BF9C3D700567E48 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE31BF9C3D700567E48 /* Accounts.framework */; };
 		08F1EBE61BF9C3E100567E48 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE51BF9C3E100567E48 /* Social.framework */; };
-
 		4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172111C0F63F400275BC3 /* MainViewController.swift */; };
 		4A2172201C0F773000275BC3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A21721E1C0F773000275BC3 /* Model.xcdatamodeld */; };
 		4A2172231C0F77AC00275BC3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172211C0F77AC00275BC3 /* User+CoreDataProperties.swift */; };
@@ -99,6 +99,8 @@
 		086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewGenreCell.swift; sourceTree = "<group>"; };
 		086B9A991C10BE9400F952BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		088EE56D1C1203D800517975 /* StoryContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryContributionViewController.swift; sourceTree = "<group>"; };
+		089475651C1153A300A107E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		08E8A0AB1BFEA0F7004261BF /* sample_story.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_story.txt; path = ../../Documents/siembra/sample_story.txt; sourceTree = "<group>"; };
 		08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -120,7 +122,6 @@
 		08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		08F1EBE31BF9C3D700567E48 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08F1EBE51BF9C3E100567E48 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		08F2D7071BFAF830001E4513 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4A2172111C0F63F400275BC3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4A21721F1C0F773000275BC3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4A2172211C0F77AC00275BC3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 		0827B2461BF94D0600615A18 = {
 			isa = PBXGroup;
 			children = (
+				088EE56D1C1203D800517975 /* StoryContributionViewController.swift */,
 				08F1EBE71BF9C3EB00567E48 /* Framework */,
 				0827B2511BF94D0600615A18 /* Siembra */,
 				0827B2501BF94D0600615A18 /* Products */,
@@ -218,18 +220,14 @@
 				4A2172111C0F63F400275BC3 /* MainViewController.swift */,
 				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
-				08F2D7071BFAF830001E4513 /* SettingsViewController.swift */,
 				086B9A981C10BE9400F952BB /* Main.storyboard */,
 				086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */,
-				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
-				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
+				089475651C1153A300A107E0 /* SettingsViewController.swift */,
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
-				08562D691C0E8251004A35FE /* HomeViewController.swift */,
 				0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */,
+				08562D691C0E8251004A35FE /* HomeViewController.swift */,
 				0845C0C51C110BC000C5C4E7 /* HomeVideoCell.swift */,
 				086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */,
-				08F2D7051BFAF465001E4513 /* LoginViewController.swift */,
-				08F2D7071BFAF830001E4513 /* LogoutViewController.swift */,
 				4A8BA2BC1C1110E8000EF64B /* ProfileViewController.swift */,
 				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
 				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
@@ -380,6 +378,7 @@
 		0827B2471BF94D0600615A18 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Abraham Starosta";
 				TargetAttributes = {
@@ -454,7 +453,6 @@
 				0845C0C41C11083E00C5C4E7 /* Video.swift in Sources */,
 				0845C0C61C110BC000C5C4E7 /* HomeVideoCell.swift in Sources */,
 				086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */,
-				08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */,
 				08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */,
 				0845C0C81C1116AD00C5C4E7 /* YoutubeVideoViewController.swift in Sources */,
 				086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */,
@@ -462,14 +460,15 @@
 				4AE31CBB1C0FC2F000CC21C0 /* Contribution.swift in Sources */,
 				4A2172271C0F8B9C00275BC3 /* Story+CoreDataProperties.swift in Sources */,
 				4A8BA2BD1C1110E8000EF64B /* ProfileViewController.swift in Sources */,
-				08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */,
 				08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */,
 				08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */,
+				088EE56E1C1203D800517975 /* StoryContributionViewController.swift in Sources */,
 				4AE31CBA1C0FC2F000CC21C0 /* Contribution+CoreDataProperties.swift in Sources */,
 				4A2172201C0F773000275BC3 /* Model.xcdatamodeld in Sources */,
 				0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */,
 				4A2172281C0F8B9C00275BC3 /* Story.swift in Sources */,
 				4AE31CBD1C0FC2F000CC21C0 /* Character.swift in Sources */,
+				089475661C1153A300A107E0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,6 +594,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -602,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -615,6 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
 			};
 			name = Release;
 		};

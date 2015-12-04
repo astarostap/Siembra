@@ -7,30 +7,49 @@
 //
 
 import UIKit
+import WebKit
 
-class YoutubeVideoViewController: UIViewController {
+class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var videoView: UIWebView!
     
-    var videoEmbedHtml: String?
-    var videoUrl: String? {
+    
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+    var videoUrl: String?
+    
+    var videoTitleString: String?
+    @IBOutlet weak var videoTitle: UILabel? {
         didSet {
-            print("video url: " + videoUrl!)
-            
-            let embedHtml = "<iframe width=\"560\" height=\"315\" src=\"\(videoUrl!)\" frameborder=\"0\" allowfullscreen></iframe>"
-            
-            print("embed html: " + embedHtml)
-            videoEmbedHtml = embedHtml
+            if let text = videoTitleString {
+                videoTitle?.text = text
+            }
         }
     }
+    
+    @IBAction func visitInSafari(sender: UIButton) {
+        var url : NSURL
+        url = NSURL(string: videoUrl!)!
+        UIApplication.sharedApplication().openURL(url)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(animated: Bool) {
-        print(videoEmbedHtml)
-        videoView.loadHTMLString(videoEmbedHtml!, baseURL: nil)
+        let embedHtml = "<iframe width=\"\(videoView.frame.width)\" height=\"\(videoView.frame.height)\" src=\"\(videoUrl!)/playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
+        videoView.loadHTMLString(embedHtml, baseURL: nil)
+        videoView.allowsInlineMediaPlayback = true
     }
     
+    func webViewDidStartLoad(webView: UIWebView) {
+        activityIndicator.startAnimating()
+    }
+
+    func webViewDidFinishLoad(webView: UIWebView) {
+        activityIndicator.stopAnimating()
+    }
 }

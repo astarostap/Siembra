@@ -242,15 +242,23 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destinationvc: UIViewController? = segue.destinationViewController
+        if let audioViewController = destinationvc as? AudioViewController {
+            //if let search = sender as? HomeVideoCell {
+            var text = ""
+            do {
+                text = try NSString(contentsOfFile: NSBundle.mainBundle().pathForResource("sample_story", ofType: "txt")!, encoding: NSUTF8StringEncoding) as! String
+            } catch {
+                
+            }
+                audioViewController.fileText = text
+                audioViewController.storyHeaderText = "Story Title"
+            //}
+        }
     }
-    */
+
 
 }
