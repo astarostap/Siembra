@@ -10,7 +10,6 @@
 		0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2521BF94D0600615A18 /* AppDelegate.swift */; };
 		0827B2581BF94D0600615A18 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
-		0827B2651BF9B81C00615A18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2641BF9B81C00615A18 /* HomeViewController.swift */; };
 		0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2091BFAC951009E0EF9 /* AudioViewController.swift */; };
 		0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */; };
 		0828A2101BFACBD8009E0EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */; };
@@ -44,7 +43,6 @@
 		08F1EBE21BF9C3CF00567E48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */; };
 		08F1EBE41BF9C3D700567E48 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE31BF9C3D700567E48 /* Accounts.framework */; };
 		08F1EBE61BF9C3E100567E48 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE51BF9C3E100567E48 /* Social.framework */; };
-
 		4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172111C0F63F400275BC3 /* MainViewController.swift */; };
 		4A2172201C0F773000275BC3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A21721E1C0F773000275BC3 /* Model.xcdatamodeld */; };
 		4A2172231C0F77AC00275BC3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172211C0F77AC00275BC3 /* User+CoreDataProperties.swift */; };
@@ -61,6 +59,8 @@
 		4A8BA2BD1C1110E8000EF64B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8BA2BC1C1110E8000EF64B /* ProfileViewController.swift */; };
 		4A8BA2BF1C1116D1000EF64B /* hannah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A8BA2BE1C1116D1000EF64B /* hannah.jpg */; };
 		4A8BA2C11C1116E5000EF64B /* lisa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A8BA2C01C1116E5000EF64B /* lisa.jpg */; };
+		4A8BA2C41C116A1E000EF64B /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8BA2C31C116A1E000EF64B /* PopoverViewController.swift */; };
+		4A8BA2C61C1178EC000EF64B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8BA2C51C1178EC000EF64B /* SettingsViewController.swift */; };
 		4A97B95A1BFD208100FA0D9B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9571BFD208100FA0D9B /* FBSDKCoreKit.framework */; };
 		4A97B95B1BFD208100FA0D9B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9581BFD208100FA0D9B /* FBSDKLoginKit.framework */; };
 		4A97B95C1BFD208100FA0D9B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97B9591BFD208100FA0D9B /* FBSDKShareKit.framework */; };
@@ -120,7 +120,6 @@
 		08F1EBE11BF9C3CF00567E48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		08F1EBE31BF9C3D700567E48 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08F1EBE51BF9C3E100567E48 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		08F2D7071BFAF830001E4513 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4A2172111C0F63F400275BC3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4A21721F1C0F773000275BC3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4A2172211C0F77AC00275BC3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -137,6 +136,8 @@
 		4A8BA2BC1C1110E8000EF64B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A8BA2BE1C1116D1000EF64B /* hannah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hannah.jpg; sourceTree = "<group>"; };
 		4A8BA2C01C1116E5000EF64B /* lisa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lisa.jpg; sourceTree = "<group>"; };
+		4A8BA2C31C116A1E000EF64B /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		4A8BA2C51C1178EC000EF64B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4A97B9571BFD208100FA0D9B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		4A97B9581BFD208100FA0D9B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		4A97B9591BFD208100FA0D9B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
@@ -218,22 +219,19 @@
 				4A2172111C0F63F400275BC3 /* MainViewController.swift */,
 				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
-				08F2D7071BFAF830001E4513 /* SettingsViewController.swift */,
 				086B9A981C10BE9400F952BB /* Main.storyboard */,
 				086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */,
-				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
-				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
 				08562D691C0E8251004A35FE /* HomeViewController.swift */,
 				0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */,
 				0845C0C51C110BC000C5C4E7 /* HomeVideoCell.swift */,
 				086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */,
-				08F2D7051BFAF465001E4513 /* LoginViewController.swift */,
-				08F2D7071BFAF830001E4513 /* LogoutViewController.swift */,
 				4A8BA2BC1C1110E8000EF64B /* ProfileViewController.swift */,
 				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
+				4A8BA2C51C1178EC000EF64B /* SettingsViewController.swift */,
 				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
 				0827B2641BF9B81C00615A18 /* HomeViewController.swift */,
+				4A8BA2C31C116A1E000EF64B /* PopoverViewController.swift */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
 				4A21722B1C0FAEB000275BC3 /* Assets.xcassets */,
@@ -453,8 +451,8 @@
 				4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */,
 				0845C0C41C11083E00C5C4E7 /* Video.swift in Sources */,
 				0845C0C61C110BC000C5C4E7 /* HomeVideoCell.swift in Sources */,
+				4A8BA2C61C1178EC000EF64B /* SettingsViewController.swift in Sources */,
 				086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */,
-				08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */,
 				08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */,
 				0845C0C81C1116AD00C5C4E7 /* YoutubeVideoViewController.swift in Sources */,
 				086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */,
@@ -462,7 +460,7 @@
 				4AE31CBB1C0FC2F000CC21C0 /* Contribution.swift in Sources */,
 				4A2172271C0F8B9C00275BC3 /* Story+CoreDataProperties.swift in Sources */,
 				4A8BA2BD1C1110E8000EF64B /* ProfileViewController.swift in Sources */,
-				08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */,
+				4A8BA2C41C116A1E000EF64B /* PopoverViewController.swift in Sources */,
 				08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */,
 				08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */,
 				4AE31CBA1C0FC2F000CC21C0 /* Contribution+CoreDataProperties.swift in Sources */,
