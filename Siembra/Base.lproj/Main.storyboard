@@ -549,7 +549,7 @@
                                 <color key="progressTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </progressView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="ScrollView" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svX-bW-7Ru">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="ScrollView" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svX-bW-7Ru">
                                 <rect key="frame" x="8" y="126" width="304" height="265"/>
                             </scrollView>
                         </subviews>
@@ -579,12 +579,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Story" id="lBb-nL-kJ4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="KEC-vV-G5E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KEC-vV-G5E">
                             <connections>
                                 <segue destination="Fh4-Ek-tyO" kind="push" id="Doy-Mn-O4r"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="WVx-Tg-Ckr"/>
                     </navigationItem>
                     <connections>
                         <outlet property="PausePlay" destination="Edd-TL-iqq" id="upa-qZ-vSg"/>
@@ -630,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2M-mh-dS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="-459"/>
+            <point key="canvasLocation" x="2427" y="-457"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="eZQ-Q1-icK">

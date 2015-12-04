@@ -19,6 +19,9 @@ UIScrollViewDelegate {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var currOffset = 0
+    var currPage = 0
+    
     var scrollviewPageWidth = 370
     
     var pageControlBeingUsed: Bool = false
@@ -58,16 +61,32 @@ UIScrollViewDelegate {
         storyHeader.text = storyHeaderText
         storyHeader.sizeToFit()
         setPagesInScroll()
-        self.pageControl.addTarget(self, action: Selector("changePage:"), forControlEvents: UIControlEvents.ValueChanged)
+        scrollView.delegate = self
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if (scrollView.contentOffset.x > CGFloat(currOffset) ) {
+            currPage += 1
+        } else {
+            currPage -= 1
+        }
+        currOffset = Int(scrollView.contentOffset.x)
+        pageControl.currentPage = currPage
+    }
+    
+    deinit {
+        if let superView = self.view.superview
+        {
+            superView.removeFromSuperview()
+        }
     }
     
     func configPageControl(numPages: Int) {
         self.pageControl.numberOfPages = numPages
-        self.pageControl.currentPage = 0
+        self.pageControl.currentPage = currPage
         self.pageControl.tintColor = UIColor.redColor()
         self.pageControl.pageIndicatorTintColor = UIColor.blackColor()
         self.pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
-        
     }
     
     func setPagesInScroll() {
@@ -112,7 +131,6 @@ UIScrollViewDelegate {
             PausePlay.setTitle("Pause", forState: UIControlState.Normal)
             PausePlay.setImage(UIImage(named: "rsz_pause.png"), forState: .Normal)
         }
-        turnPageRight()
         
     }
     
@@ -122,6 +140,7 @@ UIScrollViewDelegate {
             let newX = CGPoint(x: curr.x + CGFloat(scrollviewPageWidth), y: 0)
             scrollView.setContentOffset(newX, animated: true)
             pageControl.currentPage += 1
+            currPage += 1
         }
     }
     
@@ -131,46 +150,16 @@ UIScrollViewDelegate {
             let newX = CGPoint(x: curr.x - CGFloat(scrollviewPageWidth), y: 0)
             scrollView.setContentOffset(newX, animated: true)
             pageControl.currentPage += 1
+            currPage -= 1
         }
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        turnPageRight()
+    }
 }
 
-//extension AudioViewController: UICollectionViewDataSource {
-//    
-//    
-//    
-//    func breakStoryUpByCell() -> [String] {
-//        let numWordsPerCell = 50
-//        var result = [String]()
-//        let split = fileText!.componentsSeparatedByString(" ")
-//        var temp = ""
-//        for i in 0...split.count - 1 {
-//            let currWord = split[i]
-//            temp += " " + currWord
-//            if (i != 0 && i % numWordsPerCell  == 0){
-//                result.append(temp)
-//                temp = ""
-//            }
-//        }
-//        if (temp != "") {
-//            result.append(temp)
-//        }
-//        return result
-//    }
-
-//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return breakStoryUpByCell().count
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StoryTextCell", forIndexPath: indexPath) as! StoryTextCell
-//        cell.storyText.text = breakStoryUpByCell()[indexPath.item]
-//        return cell
-//    }
-//}
