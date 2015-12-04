@@ -11,7 +11,6 @@
 		0827B2581BF94D0600615A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B2561BF94D0600615A18 /* Main.storyboard */; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
 		0827B2651BF9B81C00615A18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2641BF9B81C00615A18 /* HomeViewController.swift */; };
-		0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2661BF9B85500615A18 /* YourLikesViewController.swift */; };
 		0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2091BFAC951009E0EF9 /* AudioViewController.swift */; };
 		0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */; };
 		0828A2101BFACBD8009E0EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */; };
@@ -78,7 +77,6 @@
 		0827B25C1BF94D0600615A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0827B25E1BF94D0600615A18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0827B2641BF9B81C00615A18 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0827B2661BF9B85500615A18 /* YourLikesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourLikesViewController.swift; sourceTree = "<group>"; };
 		0828A2091BFAC951009E0EF9 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spaceman.mp3; sourceTree = "<group>"; };
 		0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -203,7 +201,6 @@
 				08F2D7071BFAF830001E4513 /* LogoutViewController.swift */,
 				0828A2091BFAC951009E0EF9 /* AudioViewController.swift */,
 				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
-				0827B2661BF9B85500615A18 /* YourLikesViewController.swift */,
 				0827B2641BF9B81C00615A18 /* HomeViewController.swift */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
@@ -410,7 +407,6 @@
 				0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */,
 				4AE31CBC1C0FC2F000CC21C0 /* Character+CoreDataProperties.swift in Sources */,
 				4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */,
-				0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */,
 				4AE31CBB1C0FC2F000CC21C0 /* Contribution.swift in Sources */,
 				4A2172271C0F8B9C00275BC3 /* Story+CoreDataProperties.swift in Sources */,
 				08F2D7081BFAF830001E4513 /* LogoutViewController.swift in Sources */,
