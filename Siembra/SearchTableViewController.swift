@@ -23,6 +23,43 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     /// Work to filter search ///
     /////////////////////////////
     
+    
+    @IBOutlet weak var segmentedValue: UISegmentedControl! {
+        didSet {
+            searchElements = segmentedSearchItems
+        }
+    }
+    
+    
+    @IBAction func searchSegmentedControl(sender: UISegmentedControl) {
+        switch segmentedValue.selectedSegmentIndex {
+        case 0:
+            searchElements[1].removeAll()
+            searchElements[2].removeAll()
+            
+        case 1:
+            searchElements[0].removeAll()
+            searchElements[2].removeAll()
+        case 2:
+            searchElements[0].removeAll()
+            searchElements[1].removeAll()
+        case 3:
+            searchElements = originalSearchItems
+        default:
+            searchElements = originalSearchItems
+            break;
+        }
+        print(searchElements)
+        
+        // Update table
+        self.tableView.reloadData()
+        searchElements = originalSearchItems
+    }
+    
+    private var originalSearchItems = [[AnyObject]]()
+    
+    private var segmentedSearchItems = [[AnyObject]]()
+    
     private var filteredSearchItems = [[AnyObject]]()
     
     private var resultSearchController = UISearchController()
@@ -81,6 +118,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
                     searchElements.append(stories)
                     searchElements.append(characters)
             }
+            originalSearchItems = searchElements
         }
         
         self.resultSearchController = ({
