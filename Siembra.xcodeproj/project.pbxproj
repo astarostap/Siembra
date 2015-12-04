@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2521BF94D0600615A18 /* AppDelegate.swift */; };
-		0827B25A1BF94D0600615A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0827B2591BF94D0600615A18 /* Assets.xcassets */; };
-		0827B2581BF94D0600615A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B2561BF94D0600615A18 /* Main.storyboard */; };
+		0827B2581BF94D0600615A18 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
 		0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2661BF9B85500615A18 /* YourLikesViewController.swift */; };
 		0828A20A1BFAC951009E0EF9 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2091BFAC951009E0EF9 /* AudioViewController.swift */; };
 		0828A20E1BFACAD4009E0EF9 /* spaceman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */; };
 		0828A2101BFACBD8009E0EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */; };
 		0828A2151BFADD4C009E0EF9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */; };
+		0845C0C41C11083E00C5C4E7 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0C31C11083E00C5C4E7 /* Video.swift */; };
+		0845C0C61C110BC000C5C4E7 /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0C51C110BC000C5C4E7 /* HomeVideoCell.swift */; };
+		0845C0C81C1116AD00C5C4E7 /* YoutubeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */; };
 		08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562D691C0E8251004A35FE /* HomeViewController.swift */; };
 		086B9A951C10B78700F952BB /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A941C10B78700F952BB /* Genre.swift */; };
 		086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */; };
@@ -43,7 +45,6 @@
 		08F1EBE41BF9C3D700567E48 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE31BF9C3D700567E48 /* Accounts.framework */; };
 		08F1EBE61BF9C3E100567E48 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F1EBE51BF9C3E100567E48 /* Social.framework */; };
 		08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2D7071BFAF830001E4513 /* SettingsViewController.swift */; };
-		08F2D7061BFAF465001E4513 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2D7051BFAF465001E4513 /* LoginViewController.swift */; };
 		4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172111C0F63F400275BC3 /* MainViewController.swift */; };
 		4A2172201C0F773000275BC3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A21721E1C0F773000275BC3 /* Model.xcdatamodeld */; };
 		4A2172231C0F77AC00275BC3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2172211C0F77AC00275BC3 /* User+CoreDataProperties.swift */; };
@@ -80,7 +81,6 @@
 		0827B24F1BF94D0600615A18 /* Siembra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siembra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0827B2521BF94D0600615A18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0827B2591BF94D0600615A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0827B2571BF94D0600615A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0827B25C1BF94D0600615A18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0827B25E1BF94D0600615A18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0827B2661BF9B85500615A18 /* YourLikesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourLikesViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +88,9 @@
 		0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spaceman.mp3; sourceTree = "<group>"; };
 		0828A20F1BFACBD8009E0EF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		0845C0C31C11083E00C5C4E7 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		0845C0C51C110BC000C5C4E7 /* HomeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
+		0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeVideoViewController.swift; sourceTree = "<group>"; };
 		08562D691C0E8251004A35FE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		086B9A941C10B78700F952BB /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewGenreCell.swift; sourceTree = "<group>"; };
@@ -205,7 +208,7 @@
 				0828A20B1BFACA57009E0EF9 /* Supporting Files */,
 				0827B2521BF94D0600615A18 /* AppDelegate.swift */,
 				086B9A941C10B78700F952BB /* Genre.swift */,
-				0827B2561BF94D0600615A18 /* Main.storyboard */,
+				0845C0C31C11083E00C5C4E7 /* Video.swift */,
 				4A2172111C0F63F400275BC3 /* MainViewController.swift */,
 				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
@@ -217,8 +220,9 @@
 				0827B2661BF9B85500615A18 /* YourLikesViewController.swift */,
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
 				08562D691C0E8251004A35FE /* HomeViewController.swift */,
+				0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */,
+				0845C0C51C110BC000C5C4E7 /* HomeVideoCell.swift */,
 				086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */,
-				0827B2641BF9B81C00615A18 /* HomeViewController.swift */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
 				4A21722B1C0FAEB000275BC3 /* Assets.xcassets */,
@@ -405,7 +409,7 @@
 				4A21723B1C0FB03B00275BC3 /* staring_me_in_the_face.txt in Resources */,
 				4AE31CC11C0FC56000CC21C0 /* brazen_c1.txt in Resources */,
 				4AE31CBF1C0FC55800CC21C0 /* a_kiss_is_but_a_kiss_c1.txt in Resources */,
-				0827B2581BF94D0600615A18 /* Main.storyboard in Resources */,
+				0827B2581BF94D0600615A18 /* (null) in Resources */,
 				4A21722C1C0FAEB000275BC3 /* Assets.xcassets in Resources */,
 				4A21723C1C0FB03B00275BC3 /* three_letters.txt in Resources */,
 			);
@@ -425,9 +429,12 @@
 				4AE31CBC1C0FC2F000CC21C0 /* Character+CoreDataProperties.swift in Sources */,
 				4A2172121C0F63F400275BC3 /* MainViewController.swift in Sources */,
 				0827B2671BF9B85500615A18 /* YourLikesViewController.swift in Sources */,
+				0845C0C41C11083E00C5C4E7 /* Video.swift in Sources */,
+				0845C0C61C110BC000C5C4E7 /* HomeVideoCell.swift in Sources */,
 				086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */,
 				08F2D7081BFAF830001E4513 /* SettingsViewController.swift in Sources */,
 				08562D6A1C0E8251004A35FE /* HomeViewController.swift in Sources */,
+				0845C0C81C1116AD00C5C4E7 /* YoutubeVideoViewController.swift in Sources */,
 				086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */,
 				086B9A951C10B78700F952BB /* Genre.swift in Sources */,
 				4AE31CBB1C0FC2F000CC21C0 /* Contribution.swift in Sources */,

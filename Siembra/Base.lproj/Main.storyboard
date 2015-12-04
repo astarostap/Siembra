@@ -126,8 +126,85 @@
                                                 <outlet property="delegate" destination="baG-H3-TWf" id="xCo-ca-cXv"/>
                                             </connections>
                                         </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b12-jE-Nc3">
-                                            <rect key="frame" x="4" y="170" width="59" height="21"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="VideoCollectionView" directionalLockEnabled="YES" bounces="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dHt-me-oFS">
+                                            <rect key="frame" x="8" y="199" width="304" height="93"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="93" id="ISY-X8-esK"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jdd-WY-zGY">
+                                                <size key="itemSize" width="83" height="94"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Video Cell" id="M1h-Gi-A8O" customClass="HomeVideoCell" customModule="Siembra" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="83" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masturbation" translatesAutoresizingMaskIntoConstraints="NO" id="dgA-CM-f4l">
+                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="94" id="7HM-DN-ZR0"/>
+                                                                    <constraint firstAttribute="width" constant="83" id="vwf-lw-Z1A"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-GX-OrC">
+                                                                <rect key="frame" x="0.0" y="69" width="83" height="25"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m32-wi-D0u">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qeq-0k-tpD">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="83" id="Ppb-Xa-qNv"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="qeq-0k-tpD" firstAttribute="top" secondItem="m32-wi-D0u" secondAttribute="top" id="CXu-Kv-Yj9"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="qeq-0k-tpD" secondAttribute="trailing" id="G8F-y4-szt"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="qeq-0k-tpD" secondAttribute="bottom" id="NES-qL-XSl"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="qeq-0k-tpD" secondAttribute="bottom" id="UGb-p1-Tvr"/>
+                                                                        <constraint firstItem="qeq-0k-tpD" firstAttribute="leading" secondItem="m32-wi-D0u" secondAttribute="leading" id="nP1-I3-j5V"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <blurEffect style="extraLight"/>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="BJ7-GX-OrC" firstAttribute="leading" secondItem="dgA-CM-f4l" secondAttribute="leading" id="3tK-r7-RZx"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BJ7-GX-OrC" secondAttribute="bottom" id="8aa-jX-9Za"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dgA-CM-f4l" secondAttribute="trailing" id="JRM-ax-sRr"/>
+                                                        <constraint firstItem="dgA-CM-f4l" firstAttribute="leading" secondItem="M1h-Gi-A8O" secondAttribute="leading" id="PMj-d1-Avt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dgA-CM-f4l" secondAttribute="bottom" id="Xf5-bc-en5"/>
+                                                        <constraint firstItem="BJ7-GX-OrC" firstAttribute="top" secondItem="M1h-Gi-A8O" secondAttribute="topMargin" constant="61" id="dPM-ky-haL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BJ7-GX-OrC" secondAttribute="trailing" id="lIt-8T-kPM"/>
+                                                        <constraint firstItem="dgA-CM-f4l" firstAttribute="top" secondItem="M1h-Gi-A8O" secondAttribute="top" id="m4h-N5-4xn"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="featuredImage" destination="dgA-CM-f4l" id="fR3-dx-YR0"/>
+                                                        <outlet property="videoTitle" destination="qeq-0k-tpD" id="YkR-4T-C2d"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="baG-H3-TWf" id="dDj-t0-hgw"/>
+                                                <outlet property="delegate" destination="baG-H3-TWf" id="8gt-Iz-aBz"/>
+                                            </connections>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Educational Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b12-jE-Nc3">
+                                            <rect key="frame" x="8" y="170" width="146" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="RO7-Ga-XbN"/>
                                             </constraints>
@@ -137,9 +214,11 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="dHt-me-oFS" firstAttribute="top" secondItem="b12-jE-Nc3" secondAttribute="bottom" constant="8" symbolic="YES" id="1O0-7m-gdp"/>
                                         <constraint firstItem="b12-jE-Nc3" firstAttribute="top" secondItem="Qig-mf-rlp" secondAttribute="bottom" constant="8" symbolic="YES" id="1Ru-n0-eN1"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="top" secondItem="WTG-XW-Dw3" secondAttribute="bottom" constant="5" id="GMQ-DR-zpc"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="top" secondItem="Kfw-fK-1GM" secondAttribute="bottom" id="Mm0-4F-rJO"/>
+                                        <constraint firstItem="dHt-me-oFS" firstAttribute="leading" secondItem="Qig-mf-rlp" secondAttribute="leading" id="Z2d-1G-DTF"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" constant="69" id="arX-nu-CkX"/>
                                         <constraint firstItem="Kfw-fK-1GM" firstAttribute="centerX" secondItem="Qig-mf-rlp" secondAttribute="centerX" id="gLN-f7-Mvp"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="leading" secondItem="eAd-BK-kaV" secondAttribute="leading" constant="8" id="jcj-QY-Dd7"/>
@@ -147,6 +226,7 @@
                                         <constraint firstItem="b12-jE-Nc3" firstAttribute="leading" secondItem="Qig-mf-rlp" secondAttribute="leading" id="l98-qc-4jO"/>
                                         <constraint firstItem="Kfw-fK-1GM" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" id="uIy-I1-oEK"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="centerX" secondItem="eAd-BK-kaV" secondAttribute="centerX" id="uwi-1I-uRZ"/>
+                                        <constraint firstItem="dHt-me-oFS" firstAttribute="trailing" secondItem="Qig-mf-rlp" secondAttribute="trailing" id="vL6-aQ-T9N"/>
                                         <constraint firstAttribute="bottom" secondItem="Qig-mf-rlp" secondAttribute="bottom" constant="293" id="w8C-3l-ldz"/>
                                     </constraints>
                                 </view>
@@ -168,7 +248,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="u1P-N6-xO9" secondAttribute="trailing" id="kry-Lj-a50"/>
                             <constraint firstItem="u1P-N6-xO9" firstAttribute="top" secondItem="o25-gU-hP5" secondAttribute="bottom" id="pnC-e6-ySV"/>
                             <constraint firstItem="wuo-6W-4i7" firstAttribute="trailing" secondItem="u1P-N6-xO9" secondAttribute="trailing" id="sBh-PF-EuK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b12-jE-Nc3" secondAttribute="trailing" constant="237" id="xVi-Dw-qOt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b12-jE-Nc3" secondAttribute="trailing" constant="146" id="xVi-Dw-qOt"/>
                             <constraint firstItem="wuo-6W-4i7" firstAttribute="leading" secondItem="u1P-N6-xO9" secondAttribute="leading" id="yaa-AM-5fp"/>
                         </constraints>
                     </view>
@@ -176,11 +256,47 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="u1P-N6-xO9" id="exg-RZ-WN0"/>
                         <outlet property="collectionView" destination="Qig-mf-rlp" id="ANI-JG-PoM"/>
+                        <outlet property="videoCollectionView" destination="dHt-me-oFS" id="bbJ-Yl-Qd7"/>
+                        <segue destination="xqp-9d-MNd" kind="push" identifier="videoSegue" id="diw-oL-osR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qv-tW-sDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2187" y="420"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="0SD-oK-8Zz">
+            <objects>
+                <viewController id="xqp-9d-MNd" customClass="YoutubeVideoViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NTj-Q6-hrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ULU-ng-TSx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OUg-MN-vFm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRI-9F-659">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nRI-9F-659" firstAttribute="centerY" secondItem="OUg-MN-vFm" secondAttribute="centerY" id="C4a-Mv-mrC"/>
+                            <constraint firstItem="nRI-9F-659" firstAttribute="top" secondItem="NTj-Q6-hrL" secondAttribute="bottom" constant="156" id="ZxU-XP-IlZ"/>
+                            <constraint firstItem="nRI-9F-659" firstAttribute="centerX" secondItem="OUg-MN-vFm" secondAttribute="centerX" id="uee-dL-VnS"/>
+                            <constraint firstItem="nRI-9F-659" firstAttribute="leading" secondItem="OUg-MN-vFm" secondAttribute="leadingMargin" constant="24" id="xA7-iq-R1Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video" id="o99-9s-RKw"/>
+                    <connections>
+                        <outlet property="videoView" destination="nRI-9F-659" id="GPv-Vg-0oc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9r-XA-Mi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="420"/>
         </scene>
         <!--Search-->
         <scene sceneID="121-4w-0WR">
@@ -528,6 +644,7 @@
     <resources>
         <image name="29pt_logo" width="58" height="58"/>
         <image name="home_background2" width="506" height="900"/>
+        <image name="masturbation" width="480" height="360"/>
         <image name="romance_ipc" width="260" height="331"/>
         <image name="rsz_1play_button" width="60" height="60"/>
         <image name="rsz_settings-icon" width="25" height="25"/>
