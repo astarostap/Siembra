@@ -882,7 +882,7 @@
         <!--Settings-->
         <scene sceneID="zmr-Xh-Wje">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="mTx-P8-NRo" customClass="SettingsViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="mTx-P8-NRo" customClass="UserSettingsViewController" customModule="Siembra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="toP-o3-tcb"/>
                         <viewControllerLayoutGuide type="bottom" id="yFb-jL-dvC"/>
