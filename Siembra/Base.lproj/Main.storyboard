@@ -537,10 +537,6 @@
         <image name="rsz_settings-icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="bbc-UE-RZw"/>
-=======
         <segue reference="Ppy-K0-Oud"/>
->>>>>>> finalSearch
     </inferredMetricsTieBreakers>
 </document>
