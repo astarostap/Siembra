@@ -666,57 +666,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You have just added a contribution to this story. Challenge the community to pick up from your cliff hanger. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejr-mM-QbF">
-                                <rect key="frame" x="8" y="90" width="285" height="70"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Opd-DB-U7k">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_background2" translatesAutoresizingMaskIntoConstraints="NO" id="HO7-f7-Gk5">
+                                <rect key="frame" x="0.0" y="61" width="320" height="458"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chz-Wk-93A">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O8D-Oz-2WO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have just added a contribution to this story. Challenge the community to pick up from your cliff hanger. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejr-mM-QbF">
+                                            <rect key="frame" x="18" y="44" width="285" height="70"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-B0-dqf">
+                                            <rect key="frame" x="44" y="386" width="232" height="48"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                            <state key="normal" title="Launch Challenge">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="plantChallenge:" destination="Fh4-Ek-tyO" eventType="touchUpInside" id="dNQ-gj-BDj"/>
+                                            </connections>
+                                        </button>
+                                        <datePicker contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BQs-oP-DNY">
+                                            <rect key="frame" x="18" y="116" width="285" height="207"/>
+                                            <animations/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="470942481.42606598">
+                                                <!--2015-12-04 17:21:21 +0000-->
+                                            </date>
+                                        </datePicker>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge the Community" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-PS-GnL">
+                                <rect key="frame" x="34" y="72" width="242" height="31"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-B0-dqf">
-                                <rect key="frame" x="44" y="395" width="232" height="48"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Launch Challenge"/>
-                                <connections>
-                                    <action selector="plantChallenge:" destination="Fh4-Ek-tyO" eventType="touchUpInside" id="dNQ-gj-BDj"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BQs-oP-DNY">
-                                <rect key="frame" x="36" y="180" width="249" height="207"/>
-                                <animations/>
-                                <date key="date" timeIntervalSinceReferenceDate="470942481.42606598">
-                                    <!--2015-12-04 17:21:21 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Challenge the Community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-PS-GnL">
-                                <rect key="frame" x="61" y="72" width="198" height="31"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="C0Z-WA-CQI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TpJ-PS-GnL" firstAttribute="top" secondItem="ooi-8Z-y5h" secondAttribute="bottom" constant="8" symbolic="YES" id="2cy-DC-ccc"/>
-                            <constraint firstItem="BQs-oP-DNY" firstAttribute="top" secondItem="Ejr-mM-QbF" secondAttribute="bottom" constant="30" id="2ni-kD-zKi"/>
-                            <constraint firstItem="Ejr-mM-QbF" firstAttribute="top" secondItem="ooi-8Z-y5h" secondAttribute="bottom" constant="26" id="Qkq-pk-RMy"/>
-                            <constraint firstItem="BQs-oP-DNY" firstAttribute="centerY" secondItem="7ju-4M-y8k" secondAttribute="centerY" id="RHq-mF-euN"/>
-                            <constraint firstItem="BQs-oP-DNY" firstAttribute="centerX" secondItem="m5m-B0-dqf" secondAttribute="centerX" id="T41-gW-NR5"/>
-                            <constraint firstItem="m5m-B0-dqf" firstAttribute="top" secondItem="BQs-oP-DNY" secondAttribute="bottom" constant="8" symbolic="YES" id="ZUf-ai-Cuq"/>
-                            <constraint firstItem="m5m-B0-dqf" firstAttribute="leading" secondItem="7ju-4M-y8k" secondAttribute="leadingMargin" constant="38" id="fUb-ix-C94"/>
-                            <constraint firstItem="6y2-h3-Yxz" firstAttribute="top" secondItem="m5m-B0-dqf" secondAttribute="bottom" constant="76" id="hi7-oj-Ak0"/>
-                            <constraint firstItem="BQs-oP-DNY" firstAttribute="top" secondItem="TpJ-PS-GnL" secondAttribute="bottom" constant="77" id="jIB-ea-L1X"/>
-                            <constraint firstItem="BQs-oP-DNY" firstAttribute="leading" secondItem="7ju-4M-y8k" secondAttribute="leadingMargin" constant="20" id="kCA-hv-eCj"/>
-                            <constraint firstItem="TpJ-PS-GnL" firstAttribute="leading" secondItem="7ju-4M-y8k" secondAttribute="leadingMargin" constant="-8" id="mZw-3e-9bF"/>
-                            <constraint firstItem="m5m-B0-dqf" firstAttribute="centerX" secondItem="7ju-4M-y8k" secondAttribute="centerX" id="njM-59-QI8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ejr-mM-QbF" secondAttribute="trailing" constant="11" id="osE-Ak-hwJ"/>
-                            <constraint firstItem="Ejr-mM-QbF" firstAttribute="leading" secondItem="TpJ-PS-GnL" secondAttribute="leading" id="rhe-XH-g8U"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="leading" secondItem="7ju-4M-y8k" secondAttribute="leading" id="0aC-sO-8Cq"/>
+                            <constraint firstItem="HO7-f7-Gk5" firstAttribute="bottom" secondItem="6y2-h3-Yxz" secondAttribute="top" id="1eh-vr-cfs"/>
+                            <constraint firstItem="HO7-f7-Gk5" firstAttribute="trailing" secondItem="chz-Wk-93A" secondAttribute="trailing" id="3EF-NS-auN"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="top" secondItem="ooi-8Z-y5h" secondAttribute="bottom" id="3dv-xv-6ME"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="leading" secondItem="chz-Wk-93A" secondAttribute="leading" id="9w9-Kf-YSZ"/>
+                            <constraint firstItem="HO7-f7-Gk5" firstAttribute="leading" secondItem="chz-Wk-93A" secondAttribute="leading" id="AZw-bH-67E"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="top" secondItem="chz-Wk-93A" secondAttribute="top" id="VgB-V4-R7E"/>
+                            <constraint firstItem="HO7-f7-Gk5" firstAttribute="top" secondItem="7ju-4M-y8k" secondAttribute="topMargin" constant="61" id="j4Z-Y5-8oj"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="bottom" secondItem="6y2-h3-Yxz" secondAttribute="top" id="oCs-qZ-NR2"/>
+                            <constraint firstItem="Opd-DB-U7k" firstAttribute="trailing" secondItem="chz-Wk-93A" secondAttribute="trailing" id="oWH-pZ-Qe7"/>
+                            <constraint firstItem="chz-Wk-93A" firstAttribute="bottom" secondItem="6y2-h3-Yxz" secondAttribute="top" id="uA5-jh-L7t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Story Contribution" id="UEg-lE-8Uk"/>
