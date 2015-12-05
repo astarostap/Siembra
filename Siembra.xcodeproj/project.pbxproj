@@ -80,6 +80,7 @@
 		4AE31CC71C0FC57400CC21C0 /* return_to_paradise_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */; };
 		4AE31CC91C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */; };
 		4AEA150F1C12BEAA003A857C /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA150E1C12BEAA003A857C /* README */; };
+		4AEA15121C12F484003A857C /* return_to_paradise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA15111C12F484003A857C /* return_to_paradise.mp3 */; };
 		4AFB0B1D1C0FCB30001EC83B /* three_letters_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */; };
 		4AFB0B1E1C0FCB30001EC83B /* three_letters_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */; };
 		4AFB0B1F1C0FCB30001EC83B /* three_letters_c3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1C1C0FCB30001EC83B /* three_letters_c3.txt */; };
@@ -163,6 +164,7 @@
 		4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = return_to_paradise_c1.txt; sourceTree = "<group>"; };
 		4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = staring_me_in_the_face_c1.txt; sourceTree = "<group>"; };
 		4AEA150E1C12BEAA003A857C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4AEA15111C12F484003A857C /* return_to_paradise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = return_to_paradise.mp3; sourceTree = "<group>"; };
 		4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c1.txt; sourceTree = "<group>"; };
 		4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c2.txt; sourceTree = "<group>"; };
 		4AFB0B1C1C0FCB30001EC83B /* three_letters_c3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c3.txt; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				0828A20D1BFACAD4009E0EF9 /* spaceman.mp3 */,
+				4AEA15111C12F484003A857C /* return_to_paradise.mp3 */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A21723A1C0FB03B00275BC3 /* return_to_paradise.txt in Resources */,
+				4AEA15121C12F484003A857C /* return_to_paradise.mp3 in Resources */,
 				08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */,
 				086B9A9A1C10BE9400F952BB /* Main.storyboard in Resources */,
 				0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */,

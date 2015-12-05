@@ -21,7 +21,7 @@ AutoLayout API
 -- We make use of Autolayout across the app to keep our screens consistent across app launches in different device sizes. 
 
 Core Data
--- Our whole app relies on Core Data. When first launched, hard-coded data is first loaded into Core Data. Then, all required data about users, stories, characters are used when needed. For example, story descriptions are requested for the search table view, and story text is changed for added contributions. 
+-- Our app relies on Core Data. When first launched, hard-coded data is loaded into Core Data. Then, all required data about users, stories, characters are used when needed. For example, story descriptions are requested for the search table view, and story text is changed for added contributions.
 
 Animation API
 -- We use this API in our Home page, where our logo playfully bounces off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well. 
@@ -55,6 +55,9 @@ NSUserDefaults
 -- For all our settings, we make heavy use of defaults to make sure that users have a consistent experience throughout. We save font size, parental control and vibration mode settings. 
 
 MISCELLANEOUS
+
+
+
  
 NOT COVERED IN LECTURE 
 

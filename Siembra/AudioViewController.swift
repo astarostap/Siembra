@@ -51,7 +51,7 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageControlBeingUsed = false
-        let ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("spaceman", ofType: "mp3")!)
+        let ButtonAudioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("return_to_paradise", ofType: "mp3")!)
         do {
             try ButtonAudioPlayer = AVAudioPlayer(contentsOfURL: ButtonAudioUrl)
             NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "updateProgressView", userInfo: nil, repeats: true)
