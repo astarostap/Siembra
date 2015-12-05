@@ -9,14 +9,12 @@
 import UIKit
 import AVFoundation
 
-class AudioViewController: UIViewController,
-UIScrollViewDelegate {
+class AudioViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var PausePlay: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var storyHeader: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var pageControl: UIPageControl!
     
     var currOffset = 0

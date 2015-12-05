@@ -536,7 +536,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkName = "tableView(_:editActionsForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -552,7 +552,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "249"
             endingLineNumber = "249"
-            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkName = "tableView(_:editActionsForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -680,7 +680,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
             endingLineNumber = "257"
-            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkName = "tableView(_:editActionsForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

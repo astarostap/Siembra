@@ -22,6 +22,7 @@ class Story: NSManagedObject {
         return nil
     }
     
+
     // Given the story's file name, return the Story entity
     class func findStoryByGenre(genre: String, inManagedObjectContext context: NSManagedObjectContext) -> [Story]? {
         let request = NSFetchRequest(entityName: "Story")
@@ -31,5 +32,25 @@ class Story: NSManagedObject {
         }
         return nil
     }
+
+    // Given the story's title name, return the Story entity
+    class func findStoryByTitle(storyTitle: String, inManagedObjectContext context: NSManagedObjectContext) -> Story? {
+        let request = NSFetchRequest(entityName: "Story")
+        request.predicate = NSPredicate(format: "title = %@", storyTitle)
+        if let story = (try? context.executeFetchRequest(request))?.first as? Story {
+            return story
+        }
+        return nil
+    }
     
+    // Given the story's title name, return the Story entity
+    class func findStoryByCharacter(characterName: String, inManagedObjectContext context: NSManagedObjectContext) -> Story? {
+        let request = NSFetchRequest(entityName: "Character")
+        request.predicate = NSPredicate(format: "name = %@", characterName)
+        if let character = (try? context.executeFetchRequest(request))?.first as? Character {
+            let story = character.mainStory
+            return story
+        }
+        return nil
+    }
 }
