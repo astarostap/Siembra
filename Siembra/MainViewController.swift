@@ -69,12 +69,12 @@ class MainViewController: UITabBarController {
     private var usersToStories: [String: [String]] = ["Lisa": ["a_kiss_is_but_a_kiss", "brazen", "old_ghosts"], "Hannah": ["return_to_paradise", "staring_me_in_the_face", "three_letters"]]
     
     private var storiesToInfo: [String: [String: String]] =
-    ["a_kiss_is_but_a_kiss": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romantic", "title": "A Kiss Is But A Kiss", "storyDescription": "A story of love and fiery romance", "isCompleted": "true", "narratorName": "Siembra Narrator"],
-        "brazen": ["audio": "audioFileName", "image": "imageFileName", "genre": "Thriller", "title": "Brazen", "storyDescription": "A story of great pursuit and excitement", "isCompleted": "false", "narratorName": "Siembra Narrator"],
-        "old_ghosts": ["audio": "audioFileName", "image": "imageFileName", "genre": "Melancholic", "title": "Old Ghosts", "storyDescription": "Chasing away all those past heartbreaks", "isCompleted": "false", "narratorName": "Siembra Narrator"],
-        "return_to_paradise": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romantic", "title": "Return To Paradise", "storyDescription": "When that love escapes, and you want to go back", "isCompleted": "true", "narratorName": "Siembra Narrator"],
-        "staring_me_in_the_face": ["audio": "audioFileName", "image": "imageFileName", "genre": "Sexy", "title": "Staring Me In The Face", "storyDescription": "Being so close yet so far", "isCompleted": "false", "narratorName": "Siembra Narrator"],
-        "three_letters": ["audio": "audioFileName", "image": "imageFileName", "genre": "Beauty", "title": "Three Letters", "storyDescription": "A story of three close friends brought closer", "isCompleted": "false", "narratorName": "Siembra Narrator"]]
+    ["a_kiss_is_but_a_kiss": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "A Kiss Is But A Kiss", "storyDescription": "A story of love and fiery romance", "isCompleted": "true", "narratorName": "Siembra Narrator"],
+        "brazen": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Brazen", "storyDescription": "A story of great pursuit and excitement", "isCompleted": "false", "narratorName": "Siembra Narrator"],
+        "old_ghosts": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Old Ghosts", "storyDescription": "Chasing away all those past heartbreaks", "isCompleted": "false", "narratorName": "Siembra Narrator"],
+        "return_to_paradise": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Return To Paradise", "storyDescription": "When that love escapes, and you want to go back", "isCompleted": "true", "narratorName": "Siembra Narrator"],
+        "staring_me_in_the_face": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Staring Me In The Face", "storyDescription": "Being so close yet so far", "isCompleted": "false", "narratorName": "Siembra Narrator"],
+        "three_letters": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Three Letters", "storyDescription": "A story of three close friends brought closer", "isCompleted": "false", "narratorName": "Siembra Narrator"]]
     
     // Contribution Data
     
