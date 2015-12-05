@@ -20,12 +20,12 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     var currOffset = 0
     var currPage = 0
     
-    var scrollviewPageWidth = 370
+    var scrollviewPageWidth = 359
     
     var pageControlBeingUsed: Bool = false
     
     func breakStoryUpByCell() -> [String] {
-        let numWordsPerCell = 80
+        let numWordsPerCell = 50
         var result = [String]()
         let split = fileText!.componentsSeparatedByString(" ")
         var temp = ""
@@ -88,6 +88,14 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
         self.pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
     }
     
+    func formatAttributedText(text: String) -> NSAttributedString {
+        let storyFont:UIFont = UIFont(name: "Arial", size: 20)!
+        let attributes = [
+            NSForegroundColorAttributeName : UIColor.blackColor(),
+            NSFontAttributeName: storyFont
+        ]
+        return NSAttributedString(string: text, attributes: attributes)    }
+    
     func setPagesInScroll() {
         let scrollViewWidth = scrollviewPageWidth
         let scrollViewHeight = 317
@@ -96,7 +104,9 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
         var x = 0
         for cellText in splits {
             let textView = UITextView(frame: CGRect(x:x,y:0,width:scrollViewWidth, height:scrollViewHeight))
-            textView.text = cellText
+            let strAttr = formatAttributedText(cellText)
+            textView.attributedText = strAttr
+
             scrollView.addSubview(textView)
             x += scrollViewWidth
         }
