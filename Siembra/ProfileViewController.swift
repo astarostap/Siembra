@@ -21,7 +21,6 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addressLabel: UILabel!
 
     @IBAction func choosePictureFromLibrary(sender: UIButton) {
         let photoPicker = UIImagePickerController()
@@ -71,7 +70,6 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             var address = ""
             if let user = User.findUser("Lisa", inManagedObjectContext: context) {
                 address = user.address!
-                addressLabel.text = address
             }
             
             // Create map
