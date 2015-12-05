@@ -11,13 +11,54 @@ import FBSDKLoginKit
 import Parse
 import ParseFacebookUtilsV4
 import MessageUI
+import AudioToolbox
 
 class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate  {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    // Settings 
+    
+    @IBOutlet var vibrationSwitch: UISwitch!
+    
+    @IBOutlet var parentalSwitch: UISwitch!
+    
+    @IBOutlet var stepper: UIStepper!
+    
+    @IBAction func stepperAction(sender: UIStepper) {
+        let fontSize = stepper.value
+        defaults.setObject(fontSize, forKey: "fontSize")
+    }
+    
+    @IBAction func parentalSwitchAction(sender: UISwitch) {
+        var control: Int
+        if (sender.on) {
+            control = 1
+            defaults.setObject(control, forKey: "parentMode")
+        } else {
+            control = 0
+            defaults.setObject(control, forKey: "parentMode")
+        }
+    }
+    
+    @IBAction func vibrationSwitchAction(sender: UISwitch) {
+        var control: Int
+        if (sender.on) {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            control = 1
+            defaults.setObject(control, forKey: "vibrationMode")
+        } else {
+            control = 0
+            defaults.setObject(control, forKey: "vibrationMode")
+        }
+    }
+    
+    // Message Sending 
     
     @IBOutlet var subject: UITextField!
     
     @IBOutlet var message: UITextView!
+    
     
     @IBAction func sendMessage(sender: AnyObject) {
         if MFMailComposeViewController.canSendMail() {
@@ -87,12 +128,30 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         // Login functions
         var loginButton = FBSDKLoginButton()
         loginButton.delegate = self
-        loginButton.frame = CGRectMake(100, 400, 150, 40)
+        
+        loginButton.frame = CGRectMake(10, 75, 150, 40)
         self.view.addSubview(loginButton)
         
         // Mail functions
         subject.delegate = self
         message.delegate = self
+        
+        // Defaults 
+        
+        // Load font size
+        if let value = defaults.objectForKey("fontSize") as? Double { stepper.value = value }
+        
+        // Load parental mode
+        if let parentDefault = defaults.objectForKey("parentMode") as? Int {
+            if (parentDefault == 1) { parentalSwitch.setOn(true, animated: false) }
+            if (parentDefault == 0) { parentalSwitch.setOn(false, animated: false) }
+        }
+        
+        // Load vibration mode
+        if let vibrateDefault = defaults.objectForKey("vibrationMode") as? Int {
+            if (vibrateDefault == 1) { parentalSwitch.setOn(true, animated: false) }
+            if (vibrateDefault == 0) { parentalSwitch.setOn(false, animated: false) }
+        }
     }
     
     /*

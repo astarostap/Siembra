@@ -160,5 +160,12 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         turnPageRight()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationvc: UIViewController? = segue.destinationViewController
+        if let contributionController = destinationvc as? StoryContributionViewController {
+            contributionController.storyName = storyHeader.text
+        }
+    }
 }
 

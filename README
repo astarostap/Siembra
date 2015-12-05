@@ -1,0 +1,117 @@
+BREADTH 
+Table View API
+-- We make heavy use of the Table View API for our search tab. We also heavily customize it by coloring cells with a fradient, allowing swipeable gestures such as sharing and deleting, and using customized detail subtitles. 
+
+Collection View API
+-- We use the collection view in the Home tab and allow users to seamlessly swipe across the screen. 
+
+Storyboard Design API
+-- We make use of Navigation controllers and Tabbar controllers across the application to create a feature-rich app.
+
+Segue API
+-- For our profile page, we display the best story using a modal presentation style, and do so programmatically. For the contribution controller, we also present a UIDocumentPickerController through a modal segue. 
+
+Controls API
+-- We make use of controls across the app. We make heavy use of labels, buttons (in profile and story views), switches (in settings), textFields and textViews (in settings, for contact purposes)
+
+PopOver API
+-- We make use of the popoverViewController and its delegate in our ProfileViewController, to display the user's best story through a popover manual segue. This was done programatically.
+
+AutoLayout API
+-- We make use of Autolayout across the app to keep our screens consistent across app launches in different device sizes. 
+
+Core Data
+-- Our whole app relies on Core Data. When first launched, hard-coded data is first loaded into Core Data. Then, all required data about users, stories, characters are used when needed. For example, story descriptions are requested for the search table view, and story text is changed for added contributions. 
+
+Animation API
+-- We use this API in our Home page, where our logo playfully bounces off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well. 
+
+
+Image Picker API
+-- In our profile page, we allow users to pick their profile picture by going through their local photos. We make use of the UIImagePickerController and its delegate. 
+
+Settings API
+-- On our settings page, we allow users to change such things as the font size. These settings are saves in NSUserDefaults for later app usage. 
+
+Date API
+-- We make use of the Date API in our contribution view, to allow users to launch challenges to the rest of the community and allow us to later launch local notifications.
+
+Alerts API
+-- We make heavy use of alerts across the app. For example, we use them once users submit a contribution, once they share things socially, when they launch a challenge etc. 
+
+UIScrollView
+-- Our story view is powered using scroll view. Each story's page is located on a scroll view which is swipeable and can be controlled by shaking the phone. 
+
+Web View
+-- From our home page, users have access to educational videos. You tube videos are then embedded in a view or can be watched directly online through Safari. 
+
+Activity Indicator
+-- To indicate that an educational video is loading, we make use of the indicator to let users know that they must wait. 
+
+Progress View
+-- We make use of the progress view in our story view when we play a story's narration. This is a very aesthetic addtiion to the page, and makes the view come to life. 
+
+NSUserDefaults
+-- For all our settings, we make heavy use of defaults to make sure that users have a consistent experience throughout. We save font size, parental control and vibration mode settings. 
+
+MISCELLANEOUS
+ 
+NOT COVERED IN LECTURE 
+
+UIDocumentPicker 
+-- In our contribution view, we make use of the UIDocumentPickerViewController to fetch iCloud documents. We exclusively fetch text files, as these are the only useful ones for the purpose of our app. 
+
+Mail API
+-- We allow users to type an email and subject in our settings view and then we make use of the MFMailComposeViewController to submit this information to the internal mail app. Users can then automatically send. 
+
+iCloud API
+-- This API is central to our app concept, as it allows users to upload their pre-prepared story contributions to the app and append them to stories they have read. This iCloud integration is used in the contribution view.
+
+Social API 
+-- We make use of this API in the search table view, in order to allow users to swipe on entries and to share them either with Facebook or Twitter. 
+
+AVFoundation API
+-- This API is also central, as it allows us to play story narrations in our story view. Users are able to not only read romantic stories but also listen to a professional narrator. 
+
+Camera API
+-- In the profile view, we make use of the UIImagePickerController and thus the camera to allow users to take profile pictures of themselves. 
+
+Search API 
+-- We make very good use of the UISearchController, to allow users to search through our list of characters, stories and users. Using a search bar made programatically, we allow users to filter. We also create a segmented control to give users a secondary way of filtering.
+
+Paging API 
+-- In our story view, we make use of UIPageControl to allow users to swipe through their story. We also allow users to go through pages of the story by shaking their phone, as users often hold their phones with one hand. 
+
+Notification API
+-- In our contribution view, we allow users to submit contributions to append to stories using iCloud. We also allow users to challenge the rest of the community to contribute before a certain time. We then create a local notification corresponding to the time chosen, prompting the user to check out if a story has been updated. 
+
+Picker API
+-- In our contribution view, we allow users to submit a challenge to other users by selecting hours and minutes on a datePicker. 
+
+Location Services API
+-- We make use of MapKit and CoreLocation in the Profile page. Each user has an address, which can be used to see contributors around you. 
+
+Parse 3rd Party Integration 
+-- Integrated with Parse to handle all user logins. Once a user has logged in, they are able to use the app seamlessly. A user's information is then taken and stored. 
+
+MISCELLANEOUS 
+-- So much, it's hard to handle. 
+
+DEPTH 
+TableView 
+-- Our table view is dense with features and heavy with APIs. Below we will list a few of these features
+-- Built a searchcontroller into the table view and filter results
+-- Built a segmented controller to filter results 
+-- Have detail subtitle for each cell, which has varied info from CoreData depending on type of entry (character, user, story)
+-- Allow swipe gestures on each cell
+-- Allow users to delete the search items 
+-- Allow users to share the entry through Facebook or Twitter
+-- Color the cells in a pretty gradient 
+
+CREATIVITY  
+-- Our idea centers around giving women more control over their romantic and sexual lives by giving them stories to read and narrations to listen to
+-- We also frame this in an educational way by giving women educational videos in our home screen
+-- The central concept of the app is creative collaboration. The idea is that women want more control over their experiences, but also want to share these. By giving women the possibility of starting stories, they can also ask for contributions from the community. 
+-- Our app has a distinct feel to it; as you'll notice, there is a thematic purple color and a concentration on the experience of reading stories. 
+
+

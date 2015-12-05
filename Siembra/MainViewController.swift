@@ -12,6 +12,8 @@ import CoreData
 class MainViewController: UITabBarController {
     
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //Tab bar appearance
@@ -37,6 +39,12 @@ class MainViewController: UITabBarController {
         let heartImage: UIImage = UIImage(named: "rsz_heart.png")!
         tabBarItem2.image = heartImage
         // Do any additional setup after loading the view.
+        
+        // Set settings 
+        print("set all default settings")
+        defaults.setObject(0, forKey: "vibrationMode")
+        defaults.setObject(0, forKey: "parentMode")
+        defaults.setObject(12, forKey: "fontSize")
     }
     
     

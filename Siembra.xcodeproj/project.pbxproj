@@ -79,6 +79,7 @@
 		4AE31CC51C0FC56D00CC21C0 /* old_ghosts_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC31C0FC56D00CC21C0 /* old_ghosts_c2.txt */; };
 		4AE31CC71C0FC57400CC21C0 /* return_to_paradise_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */; };
 		4AE31CC91C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */; };
+		4AEA150F1C12BEAA003A857C /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA150E1C12BEAA003A857C /* README */; };
 		4AFB0B1D1C0FCB30001EC83B /* three_letters_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */; };
 		4AFB0B1E1C0FCB30001EC83B /* three_letters_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */; };
 		4AFB0B1F1C0FCB30001EC83B /* three_letters_c3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1C1C0FCB30001EC83B /* three_letters_c3.txt */; };
@@ -161,6 +162,7 @@
 		4AE31CC31C0FC56D00CC21C0 /* old_ghosts_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = old_ghosts_c2.txt; sourceTree = "<group>"; };
 		4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = return_to_paradise_c1.txt; sourceTree = "<group>"; };
 		4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = staring_me_in_the_face_c1.txt; sourceTree = "<group>"; };
+		4AEA150E1C12BEAA003A857C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c1.txt; sourceTree = "<group>"; };
 		4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c2.txt; sourceTree = "<group>"; };
 		4AFB0B1C1C0FCB30001EC83B /* three_letters_c3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c3.txt; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		0828A20B1BFACA57009E0EF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4AEA150E1C12BEAA003A857C /* README */,
 				4A8BA2C21C1116EE000EF64B /* images */,
 				0828A2111BFAD1C5009E0EF9 /* text */,
 				0828A20C1BFACA78009E0EF9 /* audio */,
@@ -442,6 +445,7 @@
 				4A8BA2C11C1116E5000EF64B /* lisa.jpg in Resources */,
 				4AFB0B1D1C0FCB30001EC83B /* three_letters_c1.txt in Resources */,
 				4AFB0B1F1C0FCB30001EC83B /* three_letters_c3.txt in Resources */,
+				4AEA150F1C12BEAA003A857C /* README in Resources */,
 				4AE31CC41C0FC56D00CC21C0 /* old_ghosts_c1.txt in Resources */,
 				4AE31CC51C0FC56D00CC21C0 /* old_ghosts_c2.txt in Resources */,
 				4A8BA2BF1C1116D1000EF64B /* hannah.jpg in Resources */,
