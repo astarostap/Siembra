@@ -27,7 +27,7 @@ UIScrollViewDelegate {
     var pageControlBeingUsed: Bool = false
     
     func breakStoryUpByCell() -> [String] {
-        let numWordsPerCell = 50
+        let numWordsPerCell = 80
         var result = [String]()
         let split = fileText!.componentsSeparatedByString(" ")
         var temp = ""
@@ -62,6 +62,7 @@ UIScrollViewDelegate {
         storyHeader.sizeToFit()
         setPagesInScroll()
         scrollView.delegate = self
+        scrollView.layer.cornerRadius = CGFloat(10)
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {

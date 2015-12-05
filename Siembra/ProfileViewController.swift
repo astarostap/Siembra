@@ -23,6 +23,18 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
 
+    @IBAction func choosePictureFromLibrary(sender: UIButton) {
+        let photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .PhotoLibrary
+        self.presentViewController(photoPicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imageView.image = editingInfo![UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
     @IBAction func takePhoto(sender: UIButton) {
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -31,8 +43,8 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func setImage() {

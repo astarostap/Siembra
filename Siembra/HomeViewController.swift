@@ -14,18 +14,22 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var videoCollectionView: UICollectionView!
     
+    @IBOutlet weak var homeHeaderView: UIView!
     
     private var genres = Genre.createGenres()
     private var videos = Video.createVideos()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.pagingEnabled = true
         collectionView.scrollEnabled = true
+        if let headerView = homeHeaderView as? LogoHeaderGameUIView {
+            headerView.addLogo()
+            headerView.startAnimation()
+        }
     }
 
     private struct Storyboard {
@@ -53,11 +57,13 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.VideoIdentifier, forIndexPath: indexPath) as! HomeVideoCell
             let video = self.videos[indexPath.item]
             cell.video = video
+            cell.layer.cornerRadius = CGFloat(10)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CallIdentifier, forIndexPath: indexPath) as! HomeCollectionViewGenreCell
             let genre = self.genres[indexPath.item]
             cell.genre = genre
+            cell.layer.cornerRadius = CGFloat(10)
             return cell
         }
     }
@@ -69,6 +75,8 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell = collectionView.cellForItemAtIndexPath(indexPath) as! HomeVideoCell
             performSegueWithIdentifier("videoSegue", sender: cell)
         } else {
+            let cell = collectionView.cellForItemAtIndexPath(indexPath) as! HomeCollectionViewGenreCell
+            performSegueWithIdentifier("Genre", sender: cell)
         }
     }
     
@@ -78,6 +86,19 @@ extension HomeViewController: UICollectionViewDataSource {
             if let cell = sender as? HomeVideoCell {
                 videoViewController.videoUrl = cell.videoUrl
                 videoViewController.videoTitleString = cell.videoTitle.text
+            }
+        }
+        if let genreTableViewController = destinationvc as? GenreTableViewController {
+            if let cell = sender as? HomeCollectionViewGenreCell {
+                let genre = cell.genreTitleLabel.text
+                if let context = AppDelegate.managedObjectContext {
+                    let stories = Story.findStoryByGenre("Thriller", inManagedObjectContext: context)
+                    
+                    genreTableViewController.stories = stories!
+                    genreTableViewController.navigationItem.title = genre
+                    print("going to genre")
+                }
+                
             }
         }
     }

@@ -21,4 +21,15 @@ class Story: NSManagedObject {
         }
         return nil
     }
+    
+    // Given the story's file name, return the Story entity
+    class func findStoryByGenre(genre: String, inManagedObjectContext context: NSManagedObjectContext) -> [Story]? {
+        let request = NSFetchRequest(entityName: "Story")
+        request.predicate = NSPredicate(format: "genre = %@", genre)
+        if let stories = (try? context.executeFetchRequest(request)) as? [Story] {
+            return stories
+        }
+        return nil
+    }
+    
 }

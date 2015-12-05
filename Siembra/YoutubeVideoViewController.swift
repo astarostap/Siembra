@@ -33,9 +33,9 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
         url = NSURL(string: videoUrl!)!
         UIApplication.sharedApplication().openURL(url)
     }
-
     
     override func viewDidLoad() {
+        videoView.delegate = self
         super.viewDidLoad()
     }
     
@@ -51,5 +51,6 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     func webViewDidFinishLoad(webView: UIWebView) {
         activityIndicator.stopAnimating()
+        webView.scrollView.contentOffset = CGPointMake(8, 8)
     }
 }
