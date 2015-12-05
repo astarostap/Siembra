@@ -100,7 +100,7 @@
 		086B9A961C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewGenreCell.swift; sourceTree = "<group>"; };
 		086B9A991C10BE9400F952BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		088EE56D1C1203D800517975 /* StoryContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryContributionViewController.swift; sourceTree = "<group>"; };
+		088EE56D1C1203D800517975 /* StoryContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryContributionViewController.swift; path = ../StoryContributionViewController.swift; sourceTree = "<group>"; };
 		088EE5711C120C2400517975 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
 		08E8A0AB1BFEA0F7004261BF /* sample_story.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_story.txt; path = ../../Documents/siembra/sample_story.txt; sourceTree = "<group>"; };
 		08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 		4A97B9581BFD208100FA0D9B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		4A97B9591BFD208100FA0D9B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		4A97B95D1BFD20D700FA0D9B /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../Downloads/parse-library-1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		4AB958D01C1265E1001880C5 /* Siembra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Siembra.entitlements; sourceTree = "<group>"; };
 		4AE31CB61C0FC2F000CC21C0 /* Contribution+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contribution+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AE31CB71C0FC2F000CC21C0 /* Contribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		4AE31CB81C0FC2F000CC21C0 /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		0827B2461BF94D0600615A18 = {
 			isa = PBXGroup;
 			children = (
-				088EE56D1C1203D800517975 /* StoryContributionViewController.swift */,
 				08F1EBE71BF9C3EB00567E48 /* Framework */,
 				0827B2511BF94D0600615A18 /* Siembra */,
 				0827B2501BF94D0600615A18 /* Products */,
@@ -214,6 +214,7 @@
 		0827B2511BF94D0600615A18 /* Siembra */ = {
 			isa = PBXGroup;
 			children = (
+				4AB958D01C1265E1001880C5 /* Siembra.entitlements */,
 				4A21720E1C0F588700275BC3 /* Core Data */,
 				0828A20B1BFACA57009E0EF9 /* Supporting Files */,
 				0827B2521BF94D0600615A18 /* AppDelegate.swift */,
@@ -235,6 +236,7 @@
 				0828A2141BFADD4C009E0EF9 /* SearchTableViewController.swift */,
 				0827B2641BF9B81C00615A18 /* HomeViewController.swift */,
 				4A8BA2C31C116A1E000EF64B /* PopoverViewController.swift */,
+				088EE56D1C1203D800517975 /* StoryContributionViewController.swift */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
 				4A21722B1C0FAEB000275BC3 /* Assets.xcassets */,
@@ -387,7 +389,12 @@
 				TargetAttributes = {
 					0827B24E1BF94D0600615A18 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = E7SDH3DXWL;
+						DevelopmentTeam = 8YJ2342CPM;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -585,6 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Siembra/Siembra.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -595,11 +603,12 @@
 				);
 				INFOPLIST_FILE = Siembra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,6 +618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Siembra/Siembra.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -619,10 +629,11 @@
 				);
 				INFOPLIST_FILE = Siembra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
