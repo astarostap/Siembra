@@ -28,7 +28,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         collectionView.scrollEnabled = true
         if let headerView = homeHeaderView as? LogoHeaderGameUIView {
             headerView.addLogo()
-            headerView.startAnimation()
+            //headerView.startAnimation()
         }
     }
 
@@ -90,9 +90,9 @@ extension HomeViewController: UICollectionViewDataSource {
         }
         if let genreTableViewController = destinationvc as? GenreTableViewController {
             if let cell = sender as? HomeCollectionViewGenreCell {
-                let genre = cell.genreTitleLabel.text
+                let genre = cell.genreTitleLabel.text!
                 if let context = AppDelegate.managedObjectContext {
-                    let stories = Story.findStoryByGenre("Thriller", inManagedObjectContext: context)
+                    let stories = Story.findStoryByGenre(genre, inManagedObjectContext: context)
                     
                     genreTableViewController.stories = stories!
                     genreTableViewController.navigationItem.title = genre

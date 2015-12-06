@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class AudioViewController: UIViewController, UIScrollViewDelegate {
+class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var PausePlay: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
@@ -17,15 +17,18 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var viewOverProgressBar: UIView!
+    
+    @IBOutlet weak var timeLabel: UILabel!
     var currOffset = 0
     var currPage = 0
     
-    var scrollviewPageWidth = 370
+    var scrollviewPageWidth = 359
     
     var pageControlBeingUsed: Bool = false
     
     func breakStoryUpByCell() -> [String] {
-        let numWordsPerCell = 80
+        let numWordsPerCell = 50
         var result = [String]()
         let split = fileText!.componentsSeparatedByString(" ")
         var temp = ""
@@ -61,6 +64,25 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
         setPagesInScroll()
         scrollView.delegate = self
         scrollView.layer.cornerRadius = CGFloat(10)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapAudioProgress:"))
+
+        viewOverProgressBar.addGestureRecognizer(tapGesture)
+    }
+    
+    func tapAudioProgress(tapGesture: UITapGestureRecognizer) {
+        let tappedPoint = tapGesture.locationInView(viewOverProgressBar)
+        let x = tappedPoint.x
+        let percentage = x / progressView.frame.width
+        progressView.progress = Float(percentage)
+        print("tapped: " + String(x) + " percentage: " + String(percentage))
+        
+        let numSecsTotal = NSNumber(double: ButtonAudioPlayer.duration) as Double
+        let numSecsAtTapped = numSecsTotal * Double(percentage)
+        
+        
+        let currentTime = NSTimeInterval(numSecsAtTapped)
+        ButtonAudioPlayer.currentTime = currentTime
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
@@ -88,6 +110,14 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
         self.pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
     }
     
+    func formatAttributedText(text: String) -> NSAttributedString {
+        let storyFont:UIFont = UIFont(name: "Arial", size: 20)!
+        let attributes = [
+            NSForegroundColorAttributeName : UIColor.blackColor(),
+            NSFontAttributeName: storyFont
+        ]
+        return NSAttributedString(string: text, attributes: attributes)    }
+    
     func setPagesInScroll() {
         let scrollViewWidth = scrollviewPageWidth
         let scrollViewHeight = 317
@@ -96,7 +126,9 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
         var x = 0
         for cellText in splits {
             let textView = UITextView(frame: CGRect(x:x,y:0,width:scrollViewWidth, height:scrollViewHeight))
-            textView.text = cellText
+            let strAttr = formatAttributedText(cellText)
+            textView.attributedText = strAttr
+
             scrollView.addSubview(textView)
             x += scrollViewWidth
         }
@@ -107,8 +139,21 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     func updateProgressView() {
         let currTime = ButtonAudioPlayer.currentTime
         let totalTime = ButtonAudioPlayer.duration
+        
         let percentage = currTime / totalTime
         progressView.progress = Float(percentage)
+        
+        let total = Int(totalTime)
+        let totalSeconds = total % 60
+        let totalMinutes = (total / 60) % 60
+        
+        let curr = Int(currTime)
+        let currSeconds = curr % 60
+        let currMinutes = (curr / 60) % 60
+
+        let currText = String(format: "%2d:%02d", currMinutes, currSeconds)
+        let totalText = String(format: "%2d:%02d", totalMinutes, totalSeconds)
+        timeLabel.text = currText + "/" + totalText
     }
 
     override func didReceiveMemoryWarning() {
@@ -160,6 +205,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         turnPageRight()
     }
+    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationvc: UIViewController? = segue.destinationViewController

@@ -27,6 +27,7 @@
 		086B9A9C1C10BF4B00F952BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */; };
 		088EE56E1C1203D800517975 /* StoryContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE56D1C1203D800517975 /* StoryContributionViewController.swift */; };
 		088EE5721C120C2400517975 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EE5711C120C2400517975 /* UserSettingsViewController.swift */; };
+		08BABC3B1C13B5A0007CF963 /* AudioRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BABC3A1C13B5A0007CF963 /* AudioRecordingViewController.swift */; };
 		08E8A0AC1BFEA0F7004261BF /* sample_story.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08E8A0AB1BFEA0F7004261BF /* sample_story.txt */; };
 		08E8A0AE1BFED1B4004261BF /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */; };
 		08E8A0B01BFFCA31004261BF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */; };
@@ -110,6 +111,7 @@
 		086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		088EE56D1C1203D800517975 /* StoryContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryContributionViewController.swift; path = ../StoryContributionViewController.swift; sourceTree = "<group>"; };
 		088EE5711C120C2400517975 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		08BABC3A1C13B5A0007CF963 /* AudioRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecordingViewController.swift; sourceTree = "<group>"; };
 		08E8A0AB1BFEA0F7004261BF /* sample_story.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_story.txt; path = ../../Documents/siembra/sample_story.txt; sourceTree = "<group>"; };
 		08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				08E8A0AF1BFFCA31004261BF /* HomeCollectionViewCell.swift */,
 				08E8A0AD1BFED1B4004261BF /* HomeCollectionViewController.swift */,
 				086B9A981C10BE9400F952BB /* Main.storyboard */,
+				08BABC3A1C13B5A0007CF963 /* AudioRecordingViewController.swift */,
 				088EE5711C120C2400517975 /* UserSettingsViewController.swift */,
 				086B9A9B1C10BF4B00F952BB /* TabBarViewController.swift */,
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
@@ -486,6 +489,7 @@
 				0845C0C81C1116AD00C5C4E7 /* YoutubeVideoViewController.swift in Sources */,
 				086B9A971C10BC0A00F952BB /* HomeCollectionViewGenreCell.swift in Sources */,
 				086B9A951C10B78700F952BB /* Genre.swift in Sources */,
+				08BABC3B1C13B5A0007CF963 /* AudioRecordingViewController.swift in Sources */,
 				4AE31CBB1C0FC2F000CC21C0 /* Contribution.swift in Sources */,
 				4A2172271C0F8B9C00275BC3 /* Story+CoreDataProperties.swift in Sources */,
 				4A8BA2BD1C1110E8000EF64B /* ProfileViewController.swift in Sources */,
