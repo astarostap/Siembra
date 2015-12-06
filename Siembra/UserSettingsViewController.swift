@@ -18,6 +18,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
     let defaults = NSUserDefaults.standardUserDefaults()
     
     // Settings 
+    @IBOutlet weak var fontSizeLabel: UILabel!
     
     @IBOutlet var vibrationSwitch: UISwitch!
     
@@ -28,6 +29,8 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
     @IBAction func stepperAction(sender: UIStepper) {
         let fontSize = stepper.value
         defaults.setObject(fontSize, forKey: "fontSize")
+        fontSizeLabel.text = "Story Font Size: " + String(fontSize)
+        
     }
     
     @IBAction func parentalSwitchAction(sender: UISwitch) {
@@ -139,7 +142,10 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         // Defaults 
         
         // Load font size
-        if let value = defaults.objectForKey("fontSize") as? Double { stepper.value = value }
+        if let value = defaults.objectForKey("fontSize") as? Double {
+            stepper.value = value
+            fontSizeLabel.text = fontSizeLabel.text! + String(value)
+        }
         
         // Load parental mode
         if let parentDefault = defaults.objectForKey("parentMode") as? Int {

@@ -825,20 +825,57 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFX-to-m5l">
-                                                    <rect key="frame" x="108" y="68" width="105" height="82"/>
+                                                    <rect key="frame" x="113" y="99" width="105" height="82"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="105" id="4bq-uL-pS0"/>
-                                                        <constraint firstAttribute="height" constant="82" id="iw5-Bc-YLK"/>
+                                                        <constraint firstAttribute="height" constant="82" id="iFI-AH-AJV"/>
                                                     </constraints>
                                                     <state key="normal" image="rsz_1recordicon"/>
                                                     <connections>
                                                         <action selector="recordAudio:" destination="lms-uH-SXC" eventType="touchUpInside" id="Wfz-fu-Cv1"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-fW-sVd">
+                                                    <rect key="frame" x="113" y="172" width="110" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9WO-Pm-uZf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record your own audio for your story!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu3-ZK-R6Y">
+                                                    <rect key="frame" x="17" y="8" width="283" height="77"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-hV-IyT">
+                                                    <rect key="frame" x="160" y="273" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="KeS-YH-Y7R"/>
+                                                        <constraint firstAttribute="height" constant="80" id="gYY-10-voj"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="rsz_play_button"/>
+                                                    <connections>
+                                                        <action selector="playTapped:" destination="lms-uH-SXC" eventType="touchUpInside" id="Ulw-UH-Mf2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aFX-to-m5l" firstAttribute="centerX" secondItem="jaC-h4-aJx" secondAttribute="centerX" id="Scy-yc-ouy"/>
-                                                <constraint firstItem="aFX-to-m5l" firstAttribute="top" secondItem="jaC-h4-aJx" secondAttribute="top" constant="68" id="jDS-aU-tia"/>
+                                                <constraint firstItem="Xee-fW-sVd" firstAttribute="centerX" secondItem="jaC-h4-aJx" secondAttribute="centerX" constant="8" id="1CV-YV-fwa"/>
+                                                <constraint firstItem="GjL-hV-IyT" firstAttribute="leading" secondItem="jaC-h4-aJx" secondAttribute="leading" constant="160" id="8Db-06-xe6"/>
+                                                <constraint firstAttribute="trailing" secondItem="lu3-ZK-R6Y" secondAttribute="trailing" constant="20" id="8Kh-mA-5cT"/>
+                                                <constraint firstItem="Xee-fW-sVd" firstAttribute="leading" secondItem="jaC-h4-aJx" secondAttribute="leading" constant="113" id="Br3-cO-F1p"/>
+                                                <constraint firstItem="Xee-fW-sVd" firstAttribute="top" secondItem="aFX-to-m5l" secondAttribute="bottom" constant="-9" id="DaI-1F-aew"/>
+                                                <constraint firstItem="aFX-to-m5l" firstAttribute="top" secondItem="jaC-h4-aJx" secondAttribute="top" constant="99" id="IDN-bo-sVa"/>
+                                                <constraint firstAttribute="bottom" secondItem="GjL-hV-IyT" secondAttribute="bottom" constant="102" id="TmD-05-NAX"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xee-fW-sVd" secondAttribute="trailing" constant="97" id="W3U-PN-s51"/>
+                                                <constraint firstAttribute="trailing" secondItem="aFX-to-m5l" secondAttribute="trailing" constant="102" id="Xvc-dd-dbE"/>
+                                                <constraint firstItem="lu3-ZK-R6Y" firstAttribute="top" secondItem="jaC-h4-aJx" secondAttribute="topMargin" id="b9M-yy-6OS"/>
+                                                <constraint firstItem="aFX-to-m5l" firstAttribute="leading" secondItem="jaC-h4-aJx" secondAttribute="leading" constant="113" id="kvU-gj-dtC"/>
+                                                <constraint firstItem="aFX-to-m5l" firstAttribute="top" secondItem="lu3-ZK-R6Y" secondAttribute="bottom" constant="14" id="pwv-Sw-kQo"/>
+                                                <constraint firstItem="GjL-hV-IyT" firstAttribute="top" secondItem="Xee-fW-sVd" secondAttribute="bottom" constant="80" id="tLK-bc-zOr"/>
+                                                <constraint firstItem="lu3-ZK-R6Y" firstAttribute="leading" secondItem="jaC-h4-aJx" secondAttribute="leading" constant="17" id="vMA-NA-dCw"/>
                                             </constraints>
                                         </view>
                                         <blurEffect style="light"/>
@@ -866,6 +903,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5es-M2-jCs"/>
+                    <connections>
+                        <outlet property="playBtn" destination="GjL-hV-IyT" id="VAy-is-Reh"/>
+                        <outlet property="recordBtn" destination="aFX-to-m5l" id="fHz-yK-llb"/>
+                        <outlet property="statusLabel" destination="Xee-fW-sVd" id="8b8-0k-XZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9a-lG-Z84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1177,9 +1219,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pG0-f6-Aa9">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <connections>
-                                    <segue destination="P2d-BQ-x0N" kind="embed" id="n5Q-tt-veK"/>
-                                </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background2" translatesAutoresizingMaskIntoConstraints="NO" id="Xb7-Qk-Ina">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
@@ -1240,10 +1279,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wHW-3e-4WQ">
-                                <rect key="frame" x="14" y="80" width="117" height="128"/>
+                                <rect key="frame" x="14" y="80" width="125" height="74"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-ff-EGe">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Font Size: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-ff-EGe">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1256,18 +1295,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vibration Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-nP-Ufe">
-                                        <rect key="frame" x="0.0" y="107" width="117" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <animations/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-zW-tDi">
-                                <rect key="frame" x="213" y="80" width="94" height="131"/>
+                                <rect key="frame" x="213" y="80" width="94" height="80"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FM3-hp-X9P">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
@@ -1283,14 +1315,6 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="parentalSwitchAction:" destination="mTx-P8-NRo" eventType="valueChanged" id="Hig-6T-can"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-g6-4C1">
-                                        <rect key="frame" x="45" y="100" width="51" height="31"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="vibrationSwitchAction:" destination="mTx-P8-NRo" eventType="valueChanged" id="F8E-pV-ydl"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -1331,34 +1355,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="uCf-hR-AEQ"/>
                     <connections>
+                        <outlet property="fontSizeLabel" destination="3kA-ff-EGe" id="4Wl-wW-aVg"/>
                         <outlet property="message" destination="fBV-AU-9PE" id="Mbi-hh-qOK"/>
                         <outlet property="parentalSwitch" destination="p6T-iA-Lwb" id="Law-eZ-IJ9"/>
                         <outlet property="stepper" destination="FM3-hp-X9P" id="exG-mC-H3v"/>
                         <outlet property="subject" destination="0bw-Hz-Ahq" id="VE9-8x-Lyd"/>
-                        <outlet property="vibrationSwitch" destination="DbY-g6-4C1" id="IT9-Ci-uXx"/>
                         <segue destination="zfA-Vp-GSm" kind="modal" identifier="SuccessfullLogin" id="8j4-15-bbR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ8-GM-5gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1330" y="1218"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="0Cc-m0-8GB">
-            <objects>
-                <viewController id="P2d-BQ-x0N" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sdK-Cb-NP9"/>
-                        <viewControllerLayoutGuide type="bottom" id="j8R-cJ-iDu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qnA-IK-xpe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bPf-ys-CzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
@@ -1369,6 +1376,7 @@
         <image name="rsz_1play_button" width="60" height="60"/>
         <image name="rsz_1recordicon" width="80" height="80"/>
         <image name="rsz_1safari-icon" width="25" height="25"/>
+        <image name="rsz_play_button" width="40" height="40"/>
         <image name="take_picture" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>

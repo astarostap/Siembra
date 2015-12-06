@@ -10,12 +10,17 @@ import AVKit
 import UIKit
 import AVFoundation
 
-//INSPIRED BY http://stackoverflow.com/questions/26472747/recording-audio-in-swift
-class AudioRecordingViewController: UIViewController {
+//INSPIRED BY https://www.youtube.com/watch?v=4qj1piMAPE0
+class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
 
+    @IBOutlet weak var recordBtn: UIButton!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        intializeRecorder()
         // Do any additional setup after loading the view.
     }
 
@@ -24,55 +29,71 @@ class AudioRecordingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var audioRecorder:AVAudioRecorder!
+    var soundRecorder: AVAudioRecorder!
+    var soundPlayer = AVAudioPlayer()
+    
+    func intializeRecorder() {
+        let settings: [String : AnyObject] = [
+            AVFormatIDKey: Int(kAudioFormatAppleLossless),
+            AVSampleRateKey:44100.0,
+            AVNumberOfChannelsKey:2,
+            AVEncoderBitRateKey:320000,
+            AVLinearPCMBitDepthKey:16,
+            AVEncoderAudioQualityKey:AVAudioQuality.Max.rawValue
+        ]
+        
+        try! soundRecorder = AVAudioRecorder(URL: fileUrl(), settings: settings)
+        
+        soundRecorder.delegate = self
+        soundRecorder.prepareToRecord()
+    }
+    
+    func fileUrl() -> NSURL {
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as! [String]
+        
+        let newFileName = "newRecording.m4a"
+        let path = paths[0].stringByAppendingPathComponent(newFileName)
+        let url = NSURL(fileURLWithPath: path)
+        return url
+    }
     
     @IBAction func recordAudio(sender: UIButton) {
-        let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         
-        //ask for permission
-        if (audioSession.respondsToSelector("requestRecordPermission:")) {
-            AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
-                if granted {
-                    print("granted")
-                    
-                    //set category and activate recorder session
-                    try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-                    try! audioSession.setActive(true)
-                    
-                    
-                    //get documnets directory
-                    let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-                    let fullPath = documentsDirectory.stringByAppendingString("voiceRecording.caf")
-                    let url = NSURL.fileURLWithPath(fullPath)
-                    
-                    //create AnyObject of settings
-                    let settings: [String : AnyObject] = [
-                        AVFormatIDKey:Int(kAudioFormatAppleIMA4), //Int required in Swift2
-                        AVSampleRateKey:44100.0,
-                        AVNumberOfChannelsKey:2,
-                        AVEncoderBitRateKey:12800,
-                        AVLinearPCMBitDepthKey:16,
-                        AVEncoderAudioQualityKey:AVAudioQuality.Max.rawValue
-                    ]
-                    
-                    //record
-                    try! self.audioRecorder = AVAudioRecorder(URL: url, settings: settings)
-                    
-                } else{
-                    print("not granted")
-                }
-            })
+        if (statusLabel.text != "Recording") {
+            soundRecorder.record()
+            playBtn.enabled = false
+            statusLabel.text = "Recording"
+        } else {
+            soundRecorder.stop()
+            statusLabel.text = "Not Recording"
+            playBtn.enabled = true
+        }
+        
+    }
+    
+    
+    var isPlaying: Bool = false
+
+    @IBAction func playTapped(sender: UIButton) {
+        if (!isPlaying) {
+            recordBtn.enabled = false
+            try! soundPlayer = AVAudioPlayer(contentsOfURL: fileUrl())
+            soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.play()
+        } else {
+            soundPlayer.stop()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer,
+        successfully flag: Bool) {
+            recordBtn.enabled = true
     }
-    */
+}
 
+extension String {
+    func stringByAppendingPathComponent(pathComponent: String) -> String {
+        return (self as NSString).stringByAppendingPathComponent(pathComponent)
+    }
 }
