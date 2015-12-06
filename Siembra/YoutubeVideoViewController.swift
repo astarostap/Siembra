@@ -13,6 +13,9 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var videoView: UIWebView!
     
+
+    @IBOutlet weak var gameView: UIView!
+
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -36,6 +39,10 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
     
     override func viewDidLoad() {
         videoView.delegate = self
+        if let headerView = gameView as? LogoHeaderGameUIView {
+            headerView.addLogo()
+            headerView.startAnimation()
+        }
         super.viewDidLoad()
     }
     
