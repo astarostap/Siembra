@@ -42,7 +42,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Video Cell" id="M1h-Gi-A8O" customClass="HomeVideoCell" customModule="Siembra" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-1" width="83" height="94"/>
+                                                    <rect key="frame" x="0.0" y="-0.5" width="83" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
@@ -146,7 +146,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Genre Cell" id="rsu-xN-Big" customClass="HomeCollectionViewGenreCell" customModule="Siembra" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-1" width="83" height="94"/>
+                                                    <rect key="frame" x="0.0" y="-0.5" width="83" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
@@ -404,11 +404,23 @@
                                                                 <action selector="cleanDrawings:" destination="xqp-9d-MNd" eventType="touchUpInside" id="oAb-Pp-RF1"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap twice to draw lines!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8I-yW-9qi">
+                                                            <rect key="frame" x="84" y="74" width="180" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Clg-Zj-2fK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="Dbw-qP-1LU" firstAttribute="leading" secondItem="8y2-2U-sdh" secondAttribute="leadingMargin" id="E5o-0T-Fuf"/>
+                                                        <constraint firstItem="r8I-yW-9qi" firstAttribute="top" secondItem="8y2-2U-sdh" secondAttribute="top" constant="74" id="FCU-L3-Hgw"/>
                                                         <constraint firstItem="Dbw-qP-1LU" firstAttribute="top" secondItem="8y2-2U-sdh" secondAttribute="topMargin" id="VpJ-P3-Fkj"/>
+                                                        <constraint firstItem="r8I-yW-9qi" firstAttribute="leading" secondItem="8y2-2U-sdh" secondAttribute="leading" constant="84" id="gMr-T2-Byu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="r8I-yW-9qi" secondAttribute="trailing" constant="56" id="xq8-nr-QkL"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
