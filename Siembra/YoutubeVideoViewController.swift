@@ -16,6 +16,11 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var gameView: UIView!
 
+    @IBAction func cleanDrawings(sender: UIButton) {
+        if let headerView = gameView as? LogoHeaderGameUIView {
+            headerView.clean()
+        }
+    }
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

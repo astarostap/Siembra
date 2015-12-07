@@ -396,7 +396,20 @@
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8y2-2U-sdh" customClass="LogoHeaderGameUIView" customModule="Siembra" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="250" width="320" height="205"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-qP-1LU">
+                                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                            <state key="normal" image="rsz_trash"/>
+                                                            <connections>
+                                                                <action selector="cleanDrawings:" destination="xqp-9d-MNd" eventType="touchUpInside" id="oAb-Pp-RF1"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Dbw-qP-1LU" firstAttribute="leading" secondItem="8y2-2U-sdh" secondAttribute="leadingMargin" id="E5o-0T-Fuf"/>
+                                                        <constraint firstItem="Dbw-qP-1LU" firstAttribute="top" secondItem="8y2-2U-sdh" secondAttribute="topMargin" id="VpJ-P3-Fkj"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <animations/>
@@ -1376,6 +1389,7 @@
         <image name="rsz_1recordicon" width="80" height="80"/>
         <image name="rsz_1safari-icon" width="25" height="25"/>
         <image name="rsz_play_button" width="40" height="40"/>
+        <image name="rsz_trash" width="40" height="40"/>
         <image name="take_picture" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>

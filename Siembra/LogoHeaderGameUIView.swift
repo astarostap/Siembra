@@ -16,8 +16,13 @@ class LogoHeaderGameUIView: UIView {
     
     private var logoView: UIImageView = UIImageView()
     
-    var ctx: CGContext?
-
+    var lines = [UIBezierPath]()
+    
+    func clean() {
+        lines = [UIBezierPath]()
+        self.setNeedsDisplay()
+    }
+    
     func addLogo() {
         let logoImage = UIImage(named: "29pt_logo.png")
         logoView = UIImageView()
@@ -27,21 +32,13 @@ class LogoHeaderGameUIView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
+        UIColor.purpleColor().setStroke()
         addLogo()
-        ctx = UIGraphicsGetCurrentContext()
         
-        let start = self.bounds.origin
-        
-        let end = CGPoint(x: start.x + self.frame.width, y: start.y + self.frame.height)
-        let line = UIBezierPath()
-        line.moveToPoint(start)
-        line.addLineToPoint(end)
-        UIColor.blackColor().setStroke()
-        
-        line.lineWidth = 10
-        line.fill()
-        line.stroke()
-        //logoBehavior.addBarrier(line, named: "diagonal")
+        for line in lines {
+            line.lineWidth = 10
+            line.stroke()
+        }
     }
     
     func startAnimation(){
@@ -66,13 +63,16 @@ class LogoHeaderGameUIView: UIView {
             start = CGPoint(x: x, y: y)
         } else {
             end = CGPoint(x: x, y: y)
-            let logoImage = UIImage(named: "29pt_logo.png")
-            logoView = UIImageView()
-            logoView.image = logoImage
-            logoView.frame = CGRectMake(end!.x, end!.y, logoImage!.size.width, logoImage!.size.height)
-            addSubview(logoView)
+    
+            let line = UIBezierPath()
+            line.moveToPoint(start!)
+            line.addLineToPoint(end!)
+            
+            lines.append(line)
             start = nil
             end = nil
+            
+            self.setNeedsDisplay()
         }
     }
     
