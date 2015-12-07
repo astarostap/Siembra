@@ -129,7 +129,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         super.viewDidLoad()
         
         // Login functions
-        var loginButton = FBSDKLoginButton()
+        let loginButton = FBSDKLoginButton()
         loginButton.delegate = self
         
         loginButton.frame = CGRectMake(10, 75, 150, 40)

@@ -42,6 +42,7 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
         if let headerView = gameView as? LogoHeaderGameUIView {
             headerView.addLogo()
             headerView.startAnimation()
+            headerView.setUpDrawingGestures()
         }
         super.viewDidLoad()
     }

@@ -27,11 +27,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-fK-1GM" customClass="LogoHeaderGameUIView" customModule="Siembra" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="VideoCollectionView" directionalLockEnabled="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dHt-me-oFS">
                                             <rect key="frame" x="8" y="228" width="304" height="93"/>
                                             <animations/>
@@ -47,7 +42,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Video Cell" id="M1h-Gi-A8O" customClass="HomeVideoCell" customModule="Siembra" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="83" height="94"/>
+                                                    <rect key="frame" x="0.0" y="-1" width="83" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
@@ -151,7 +146,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Genre Cell" id="rsu-xN-Big" customClass="HomeCollectionViewGenreCell" customModule="Siembra" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="83" height="94"/>
+                                                    <rect key="frame" x="0.0" y="-1" width="83" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="83" height="94"/>
@@ -220,23 +215,28 @@
                                                 <outlet property="delegate" destination="baG-H3-TWf" id="xCo-ca-cXv"/>
                                             </connections>
                                         </collectionView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="29pt_logo" translatesAutoresizingMaskIntoConstraints="NO" id="CbR-2K-Nyn">
+                                            <rect key="frame" x="125" y="8" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="78U-yB-FZM"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="Kfw-fK-1GM" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" id="2sO-OK-63h"/>
                                         <constraint firstItem="dHt-me-oFS" firstAttribute="top" secondItem="b12-jE-Nc3" secondAttribute="bottom" constant="8" symbolic="YES" id="90y-oO-PNo"/>
-                                        <constraint firstItem="Kfw-fK-1GM" firstAttribute="leading" secondItem="eAd-BK-kaV" secondAttribute="leading" id="BfN-Au-lGG"/>
                                         <constraint firstItem="b12-jE-Nc3" firstAttribute="leading" secondItem="eAd-BK-kaV" secondAttribute="leadingMargin" id="Hjz-Tf-sF2"/>
+                                        <constraint firstItem="CbR-2K-Nyn" firstAttribute="centerX" secondItem="eAd-BK-kaV" secondAttribute="centerX" id="Jol-cq-AQv"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="top" secondItem="Cd3-hi-Eu6" secondAttribute="bottom" constant="8" symbolic="YES" id="QS8-VU-Ipy"/>
                                         <constraint firstItem="b12-jE-Nc3" firstAttribute="leading" secondItem="dHt-me-oFS" secondAttribute="leading" id="S1i-M4-zag"/>
+                                        <constraint firstItem="CbR-2K-Nyn" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" constant="8" id="SSr-bF-5zt"/>
                                         <constraint firstItem="b12-jE-Nc3" firstAttribute="top" secondItem="Qig-mf-rlp" secondAttribute="bottom" constant="3" id="TGP-Qk-WW7"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="trailing" secondItem="dHt-me-oFS" secondAttribute="trailing" id="VLD-0v-MI0"/>
-                                        <constraint firstAttribute="bottom" secondItem="Kfw-fK-1GM" secondAttribute="bottom" id="Wfx-Bh-Kco"/>
+                                        <constraint firstItem="Qig-mf-rlp" firstAttribute="top" secondItem="CbR-2K-Nyn" secondAttribute="bottom" constant="25" id="b1b-fr-W5S"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="leading" secondItem="Cd3-hi-Eu6" secondAttribute="leading" id="cAC-q5-TUx"/>
                                         <constraint firstItem="Cd3-hi-Eu6" firstAttribute="top" secondItem="eAd-BK-kaV" secondAttribute="top" constant="74" id="gXp-tj-dKU"/>
-                                        <constraint firstAttribute="trailing" secondItem="Kfw-fK-1GM" secondAttribute="trailing" id="l45-di-XjF"/>
+                                        <constraint firstItem="CbR-2K-Nyn" firstAttribute="centerX" secondItem="Qig-mf-rlp" secondAttribute="centerX" id="mWM-Xg-GK6"/>
                                         <constraint firstItem="Qig-mf-rlp" firstAttribute="leading" secondItem="b12-jE-Nc3" secondAttribute="leading" id="t3A-RE-9WJ"/>
-                                        <constraint firstItem="Kfw-fK-1GM" firstAttribute="centerX" secondItem="Qig-mf-rlp" secondAttribute="centerX" id="wnr-tB-aWa"/>
                                     </constraints>
                                 </view>
                                 <animations/>
@@ -257,7 +257,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="u1P-N6-xO9" secondAttribute="trailing" id="kry-Lj-a50"/>
                             <constraint firstItem="u1P-N6-xO9" firstAttribute="top" secondItem="o25-gU-hP5" secondAttribute="bottom" id="pnC-e6-ySV"/>
                             <constraint firstItem="wuo-6W-4i7" firstAttribute="trailing" secondItem="u1P-N6-xO9" secondAttribute="trailing" id="sBh-PF-EuK"/>
-                            <constraint firstItem="Wra-B2-E5F" firstAttribute="top" secondItem="Kfw-fK-1GM" secondAttribute="bottom" id="xFc-xv-p47"/>
                             <constraint firstItem="wuo-6W-4i7" firstAttribute="leading" secondItem="u1P-N6-xO9" secondAttribute="leading" id="yaa-AM-5fp"/>
                         </constraints>
                     </view>
@@ -272,7 +271,6 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="u1P-N6-xO9" id="exg-RZ-WN0"/>
                         <outlet property="collectionView" destination="Qig-mf-rlp" id="ANI-JG-PoM"/>
-                        <outlet property="homeHeaderView" destination="Kfw-fK-1GM" id="2AU-8R-F8a"/>
                         <outlet property="videoCollectionView" destination="dHt-me-oFS" id="bbJ-Yl-Qd7"/>
                         <segue destination="xqp-9d-MNd" kind="push" identifier="videoSegue" id="diw-oL-osR"/>
                         <segue destination="FfW-gA-H3T" kind="push" identifier="Genre" id="Fxj-Yn-hkp"/>
@@ -1369,6 +1367,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="29pt_logo" width="58" height="58"/>
         <image name="home_background2" width="506" height="900"/>
         <image name="masturbation" width="480" height="360"/>
         <image name="more tab" width="20" height="20"/>
@@ -1380,7 +1379,7 @@
         <image name="take_picture" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6cS-8q-awy"/>
+        <segue reference="Ud0-o0-2Ob"/>
         <segue reference="rk5-W1-fuB"/>
     </inferredMetricsTieBreakers>
 </document>
