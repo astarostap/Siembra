@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 
+//inspired by https://www.youtube.com/watch?v=rcVv1N1hReQ
 class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var videoView: UIWebView!

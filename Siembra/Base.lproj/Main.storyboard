@@ -587,11 +587,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-Kx-BTe">
-                                            <rect key="frame" x="141" y="332" width="39" height="37"/>
+                                        <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-Kx-BTe">
+                                            <rect key="frame" x="0.0" y="332" width="320" height="37"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="39" id="Cug-tz-c5j"/>
+                                                <constraint firstAttribute="width" constant="320" id="Sxx-3t-Btq"/>
                                             </constraints>
                                         </pageControl>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDF-sE-en1">
@@ -628,12 +628,11 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="JGz-wL-XKo" firstAttribute="bottom" secondItem="kUK-gy-YVU" secondAttribute="bottomMargin" id="3Nx-ci-aG1"/>
-                                        <constraint firstAttribute="bottom" secondItem="q5c-Kx-BTe" secondAttribute="bottom" constant="86" id="BT0-rY-XMe"/>
-                                        <constraint firstItem="q5c-Kx-BTe" firstAttribute="centerX" secondItem="kUK-gy-YVU" secondAttribute="centerX" id="TVQ-fY-6Vz"/>
+                                        <constraint firstItem="q5c-Kx-BTe" firstAttribute="leading" secondItem="kUK-gy-YVU" secondAttribute="leading" id="6cY-xf-h6O"/>
                                         <constraint firstItem="JGz-wL-XKo" firstAttribute="leading" secondItem="kUK-gy-YVU" secondAttribute="leading" constant="92" id="U5p-ea-ilS"/>
                                         <constraint firstItem="gDF-sE-en1" firstAttribute="leading" secondItem="kUK-gy-YVU" secondAttribute="leading" constant="88" id="Y7o-Y2-7rH"/>
-                                        <constraint firstItem="gDF-sE-en1" firstAttribute="top" secondItem="q5c-Kx-BTe" secondAttribute="bottom" constant="33" id="YQ4-Ac-YPb"/>
-                                        <constraint firstItem="q5c-Kx-BTe" firstAttribute="leading" secondItem="kUK-gy-YVU" secondAttribute="leading" constant="141" id="afv-lp-acB"/>
+                                        <constraint firstItem="gDF-sE-en1" firstAttribute="top" secondItem="q5c-Kx-BTe" secondAttribute="bottom" constant="33" id="a8t-dB-jdy"/>
+                                        <constraint firstAttribute="trailing" secondItem="q5c-Kx-BTe" secondAttribute="trailing" id="dlJ-8E-6wS"/>
                                         <constraint firstAttribute="trailing" secondItem="gDF-sE-en1" secondAttribute="trailing" constant="27" id="kNC-Pz-6rT"/>
                                         <constraint firstAttribute="bottom" secondItem="gDF-sE-en1" secondAttribute="bottom" constant="25" id="vyg-dk-AaG"/>
                                     </constraints>

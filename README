@@ -55,6 +55,12 @@ Progress View
 NSUserDefaults
 -- For all our settings, we make heavy use of defaults to make sure that users have a consistent experience throughout. We save font size, parental control and vibration mode settings.
 
+Visual Effects
+-- We used blurred visual effects for every screen's background. In addition, we used blurred effect for the collection view cells in the home screen where we include
+    the cell's text.
+
+
+
 
 MISCELLANEOUS
 

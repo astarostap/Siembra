@@ -44,7 +44,7 @@ class MainViewController: UITabBarController {
         print("set all default settings")
         defaults.setObject(0, forKey: "vibrationMode")
         defaults.setObject(0, forKey: "parentMode")
-        defaults.setObject(12, forKey: "fontSize")
+        defaults.setObject(20, forKey: "fontSize")
     }
     
     

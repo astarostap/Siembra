@@ -48,6 +48,7 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
         soundRecorder.prepareToRecord()
     }
     
+    //gets the file url where the sound recording will be saved
     func fileUrl() -> NSURL {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as! [String]
         
