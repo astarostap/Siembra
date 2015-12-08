@@ -401,7 +401,7 @@
 				TargetAttributes = {
 					0827B24E1BF94D0600615A18 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 8YJ2342CPM;
+						DevelopmentTeam = E7SDH3DXWL;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -618,7 +618,7 @@
 				);
 				INFOPLIST_FILE = Siembra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra2;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
@@ -643,7 +643,7 @@
 				);
 				INFOPLIST_FILE = Siembra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra2;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs147.Siembra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Siembra-Bridging-Header.h";
