@@ -49,6 +49,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        //set up video cells
         if (collectionView.restorationIdentifier == "VideoCollectionView") {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.VideoIdentifier, forIndexPath: indexPath) as! HomeVideoCell
             let video = self.videos[indexPath.item]
@@ -56,6 +57,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.layer.cornerRadius = CGFloat(10)
             return cell
         } else {
+        //set up video genre cell
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CallIdentifier, forIndexPath: indexPath) as! HomeCollectionViewGenreCell
             let genre = self.genres[indexPath.item]
             cell.genre = genre

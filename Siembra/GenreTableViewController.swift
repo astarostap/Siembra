@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Table that shows entries for a given genre
 class GenreTableViewController: UITableViewController {
     
     var stories: [Story] = [Story]() {

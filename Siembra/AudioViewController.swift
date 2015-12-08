@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+//View where user can read/listen to an audio
 class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var PausePlay: UIButton!
@@ -27,7 +28,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
     
     var pageControlBeingUsed: Bool = false
     
-    func breakStoryUpByCell() -> [String] {
+    //breaks up story text into multiple pages
+    private func breakStoryUpByCell() -> [String] {
         let numWordsPerCell = 50
         var result = [String]()
         let split = fileText!.componentsSeparatedByString(" ")
@@ -102,7 +104,7 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         }
     }
     
-    func configPageControl(numPages: Int) {
+    private func configPageControl(numPages: Int) {
         self.pageControl.numberOfPages = numPages
         self.pageControl.currentPage = currPage
         self.pageControl.tintColor = UIColor.redColor()
@@ -110,7 +112,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         self.pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
     }
     
-    func formatAttributedText(text: String) -> NSAttributedString {
+    //formats font on the scroll view
+    private func formatAttributedText(text: String) -> NSAttributedString {
         let defaults = NSUserDefaults.standardUserDefaults()
         var fontSize = 20
         if let value = defaults.objectForKey("fontSize") as? Int {
@@ -125,7 +128,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         ]
         return NSAttributedString(string: text, attributes: attributes)    }
     
-    func setPagesInScroll() {
+    //configure scroll view's pages
+    private func setPagesInScroll() {
         let scrollViewWidth = scrollviewPageWidth
         let scrollViewHeight = 317
         
@@ -143,7 +147,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         configPageControl(splits.count)
     }
     
-    func updateProgressView() {
+    private func updateProgressView() {
+        //update progress view state
         let currTime = ButtonAudioPlayer.currentTime
         let totalTime = ButtonAudioPlayer.duration
         
@@ -158,6 +163,7 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         let currSeconds = curr % 60
         let currMinutes = (curr / 60) % 60
 
+        //set progress view label's text
         let currText = String(format: "%2d:%02d", currMinutes, currSeconds)
         let totalText = String(format: "%2d:%02d", totalMinutes, totalSeconds)
         timeLabel.text = currText + "/" + totalText
@@ -185,7 +191,8 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         
     }
     
-    func turnPageRight() {
+    //turn pages on scroll view
+    private func turnPageRight() {
         if (pageControl.currentPage < pageControl.numberOfPages - 1) {
             let curr = scrollView.contentOffset
             let newX = CGPoint(x: curr.x + CGFloat(scrollviewPageWidth), y: 0)
@@ -195,7 +202,7 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         }
     }
     
-    func turnPageLeft() {
+    private func turnPageLeft() {
         if (pageControl.currentPage > 0) {
             let curr = scrollView.contentOffset
             let newX = CGPoint(x: curr.x - CGFloat(scrollviewPageWidth), y: 0)

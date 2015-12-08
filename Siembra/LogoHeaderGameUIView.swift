@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Interactive view
 class LogoHeaderGameUIView: UIView {
 
     private let logoBehavior = LogoObjectBehavior()
@@ -56,6 +57,8 @@ class LogoHeaderGameUIView: UIView {
     var start: CGPoint?
     var end: CGPoint?
     
+    //Enables the user to create lines by tapping on a starting and on an
+    //ending point
     func tapScreen(tapGesture: UITapGestureRecognizer) {
         let tappedPoint = tapGesture.locationInView(self)
         let x = tappedPoint.x
