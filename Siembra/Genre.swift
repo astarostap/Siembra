@@ -8,6 +8,7 @@
 
 import UIKit
 
+//hard coded genres
 class Genre {
     var title = ""
     var featuredImage: UIImage!

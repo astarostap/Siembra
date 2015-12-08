@@ -32,6 +32,7 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
     var soundRecorder: AVAudioRecorder!
     var soundPlayer = AVAudioPlayer()
     
+    //initializes sound recorder. it lets the user record audio and play it.
     func intializeRecorder() {
         let settings: [String : AnyObject] = [
             AVFormatIDKey: Int(kAudioFormatAppleLossless),
@@ -49,7 +50,7 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
     }
     
     //gets the file url where the sound recording will be saved
-    func fileUrl() -> NSURL {
+    private func fileUrl() -> NSURL {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as! [String]
         
         let newFileName = "newRecording.m4a"

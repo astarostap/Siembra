@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//in charge of displaying the home view controller
 class HomeViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var backgroundImageView: UIImageView!

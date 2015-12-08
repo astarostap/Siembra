@@ -8,6 +8,7 @@
 
 import UIKit
 
+//hard coded videos
 class Video {
     var title = ""
     var videoUrl = ""

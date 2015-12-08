@@ -54,7 +54,7 @@ class GenreTableViewController: UITableViewController {
         return cell
     }
     
-    func coloredCells(index: Int) -> UIColor {
+    private func coloredCells(index: Int) -> UIColor {
         let val = (CGFloat(index) / CGFloat(stories.count)) * 0.7
         return UIColor(red: val, green: 0.0, blue: 1.0, alpha: 0.1)
     }
