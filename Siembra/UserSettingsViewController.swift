@@ -17,7 +17,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
-    // Settings 
+    // Setting outlets, corresponding to the font size, the two switches, and the stepper.
     @IBOutlet weak var fontSizeLabel: UILabel!
     
     @IBOutlet var vibrationSwitch: UISwitch!
@@ -26,6 +26,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
     
     @IBOutlet var stepper: UIStepper!
     
+    // This will increase the font size for the stories in the AudioViewController
     @IBAction func stepperAction(sender: UIStepper) {
         let fontSize = stepper.value
         defaults.setObject(fontSize, forKey: "fontSize")
@@ -33,6 +34,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         
     }
     
+    // This button will turn on parental mode, which will filter through stories that are of a more R-rated nature
     @IBAction func parentalSwitchAction(sender: UISwitch) {
         var control: Int
         if (sender.on) {
@@ -44,6 +46,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         }
     }
     
+    // Will turn on vibration for a split second
     @IBAction func vibrationSwitchAction(sender: UISwitch) {
         var control: Int
         if (sender.on) {
@@ -56,13 +59,14 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         }
     }
     
-    // Message Sending 
+    // Message Sending for users to be able to contact us if they have issues
     
     @IBOutlet var subject: UITextField!
     
     @IBOutlet var message: UITextView!
     
-    
+    // This function makes a MailCompose controller which will use the text in subject and message and open up the Mail app. If the mail fails, then an alert is launched. 
+    // Inspiration for this feature was taken from this tutorial http://www.ioscreator.com/tutorials/send-email-tutorial-ios8-swift
     @IBAction func sendMessage(sender: AnyObject) {
         if MFMailComposeViewController.canSendMail() {
             let picker = MFMailComposeViewController()
@@ -82,7 +86,6 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         }
     }
     
-    // Using elements from this tutorial http://www.ioscreator.com/tutorials/send-email-tutorial-ios8-swift
     // MFMailComposeViewControllerDelegate
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -115,12 +118,12 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         self.performSegueWithIdentifier("SignIn", sender: sender)
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    private func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         self.performSegueWithIdentifier("SuccessfullLogin", sender: nil)
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    private func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
         
     }
@@ -139,7 +142,7 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         subject.delegate = self
         message.delegate = self
         
-        // Defaults 
+        // Defaults: load all the appropriate user defaults so users are not surprised by weird settings
         
         // Load font size
         if let value = defaults.objectForKey("fontSize") as? Double {
@@ -159,15 +162,4 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
             if (vibrateDefault == 0) { parentalSwitch.setOn(false, animated: false) }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

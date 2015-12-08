@@ -14,6 +14,8 @@ class MainViewController: UITabBarController {
     
     let defaults = NSUserDefaults.standardUserDefaults()
 
+    
+    // When the main home page first loads, then we (1) create the tab appearance with the appropriate items, we (2) set up all the necessary settings and add them to the user defaults, and (3) most importantly, we add all hard-coded data to our Core Data database.
     override func viewDidLoad() {
         super.viewDidLoad()
         //Tab bar appearance
@@ -60,7 +62,8 @@ class MainViewController: UITabBarController {
     ///////////////////////
     
     // User Data
-    private var users: [String] = ["Lisa", "Hannah"]
+    
+    private var users: [String] = ["Lisa", "Hannah"] // Only two users. In future we will support addition of new users
     
     private var usersToAddress: [String: String] = ["Lisa": "Stanford, CA, USA", "Hannah": "Stanford, CA, USA"]
     
@@ -77,8 +80,8 @@ class MainViewController: UITabBarController {
         "three_letters": ["audio": "audioFileName", "image": "imageFileName", "genre": "Romance", "title": "Three Letters", "storyDescription": "A story of three close friends brought closer", "isCompleted": "false", "narratorName": "Siembra Narrator"]]
     
     // Contribution Data
-    
     private var usersToContributedStory: [String: [String]] = ["Hannah": ["a_kiss_is_but_a_kiss", "brazen", "old_ghosts"], "Lisa": ["return_to_paradise", "staring_me_in_the_face", "three_letters"]]
+    
     private var storyToContributions: [String: [String]] = ["a_kiss_is_but_a_kiss": ["a_kiss_is_but_a_kiss_c1"],
         "brazen": ["brazen_c1"],
         "old_ghosts": ["old_ghosts_c1", "old_ghosts_c2"],
@@ -111,6 +114,7 @@ class MainViewController: UITabBarController {
     /// End of Hard Coded Data ///
     //////////////////////////////
     
+    // Launching the database requires loading up users, loading up stories, loading up characters and contributions. We also print a set of checks every time the app first launches to make sure that the database is currently loaded.
     private func launchDatabase() {
         if let context = AppDelegate.managedObjectContext {
             context.performBlock {
@@ -171,6 +175,7 @@ class MainViewController: UITabBarController {
         }
     }
     
+    // This loads the characters into Core Data and sets each characters name, description and story
     private func characterLoader(inManagedObjectContext context: NSManagedObjectContext) {
         for story in storyToCharacters.keys {
             if let characters = storyToCharacters[story] {
@@ -182,15 +187,13 @@ class MainViewController: UITabBarController {
                         newCharacter.name = characterName
                         newCharacter.personaDescription = characterDescription
                         newCharacter.mainStory = Story.findStory(story, inManagedObjectContext: context)
-                        // print("Character story: \(newCharacter.name) + \(newCharacter.mainStory)")
-                        // print("Character: \(newCharacter.name)")
-                        // print("Character: \(newCharacter.personaDescription)")
                     }
                 }
             }
         }
     }
     
+    // This loads the contributions of each user into the database, including the text, the writer name (a current user) and the story
     private func contributionLoader(inManagedObjectContext context: NSManagedObjectContext) {
         for user in usersToContributedStory.keys {
             if let storiesContributed = usersToContributedStory[user] {
@@ -218,6 +221,7 @@ class MainViewController: UITabBarController {
         }
     }
     
+    // This loads the stories into the database. This contains the most information, including text, title, genre. This function is divided into two users, as each story is attributed to a distinct user to start with.
     private func storyLoader(inManagedObjectContext context: NSManagedObjectContext) {
         let textTitles1 = usersToStories[self.users[0]]
         let textTitles2 = usersToStories[self.users[1]]
@@ -238,11 +242,6 @@ class MainViewController: UITabBarController {
                     if self.storiesToInfo[textFileName]!["isCompleted"] == "true" { story.isCompleted = true} else { story.isCompleted = false }
                     story.narratorName = self.storiesToInfo[textFileName]!["narratorName"]
                     story.writer = User.findUser(users[0], inManagedObjectContext: context)
-                    
-                    //print("storyText: \(story.text)")
-                    //print("storyTitle: \(story.title)")
-                    //print("storyGenre: \(story.genre)")
-                    
                 }
             } catch {
                 // Ignore
@@ -277,8 +276,7 @@ class MainViewController: UITabBarController {
         }
     }
     
-    
-    
+    // Each user is loaded into the database.
     private func userLoader(inManagedObjectContext context: NSManagedObjectContext) {
         for (userName, userAddress) in usersToAddress {
             var count = 0
@@ -292,18 +290,4 @@ class MainViewController: UITabBarController {
             }
         }
     }
-
-
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

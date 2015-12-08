@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
 
+    // This function allows the user to choose a new profile picture from her library of photos on her device.
     @IBAction func choosePictureFromLibrary(sender: UIButton) {
         let photoPicker = UIImagePickerController()
         photoPicker.delegate = self
