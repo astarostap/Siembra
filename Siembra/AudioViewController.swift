@@ -147,7 +147,7 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         configPageControl(splits.count)
     }
     
-    private func updateProgressView() {
+    func updateProgressView() {
         //update progress view state
         let currTime = ButtonAudioPlayer.currentTime
         let totalTime = ButtonAudioPlayer.duration

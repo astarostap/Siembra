@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080C9C791C179771005032F0 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 080C9C781C179771005032F0 /* README.txt */; };
 		0827B2531BF94D0600615A18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827B2521BF94D0600615A18 /* AppDelegate.swift */; };
 		0827B2581BF94D0600615A18 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0827B25D1BF94D0600615A18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */; };
@@ -78,7 +79,6 @@
 		4AE31CC51C0FC56D00CC21C0 /* old_ghosts_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC31C0FC56D00CC21C0 /* old_ghosts_c2.txt */; };
 		4AE31CC71C0FC57400CC21C0 /* return_to_paradise_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */; };
 		4AE31CC91C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */; };
-		4AEA150F1C12BEAA003A857C /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA150E1C12BEAA003A857C /* README */; };
 		4AEA15121C12F484003A857C /* return_to_paradise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA15111C12F484003A857C /* return_to_paradise.mp3 */; };
 		4AFB0B1D1C0FCB30001EC83B /* three_letters_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */; };
 		4AFB0B1E1C0FCB30001EC83B /* three_letters_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */; };
@@ -86,6 +86,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080C9C781C179771005032F0 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../../../Documents/siembra/README.txt; sourceTree = "<group>"; };
 		0827B24F1BF94D0600615A18 /* Siembra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siembra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0827B2521BF94D0600615A18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0827B2591BF94D0600615A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 		4AE31CC31C0FC56D00CC21C0 /* old_ghosts_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = old_ghosts_c2.txt; sourceTree = "<group>"; };
 		4AE31CC61C0FC57400CC21C0 /* return_to_paradise_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = return_to_paradise_c1.txt; sourceTree = "<group>"; };
 		4AE31CC81C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = staring_me_in_the_face_c1.txt; sourceTree = "<group>"; };
-		4AEA150E1C12BEAA003A857C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = "<group>"; };
 		4AEA15111C12F484003A857C /* return_to_paradise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = return_to_paradise.mp3; sourceTree = "<group>"; };
 		4AFB0B1A1C0FCB30001EC83B /* three_letters_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c1.txt; sourceTree = "<group>"; };
 		4AFB0B1B1C0FCB30001EC83B /* three_letters_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three_letters_c2.txt; sourceTree = "<group>"; };
@@ -236,6 +236,7 @@
 				0827B2591BF94D0600615A18 /* Assets.xcassets */,
 				0845C0C71C1116AD00C5C4E7 /* YoutubeVideoViewController.swift */,
 				0856CECC1C1255CC0081C5F1 /* LogoObjectBehavior.swift */,
+				080C9C781C179771005032F0 /* README.txt */,
 				0856CECA1C1254030081C5F1 /* LogoHeaderGameUIView.swift */,
 				08562D691C0E8251004A35FE /* HomeViewController.swift */,
 				085D07A91C12703300223BCD /* GenreTableViewController.swift */,
@@ -247,7 +248,6 @@
 				0827B2641BF9B81C00615A18 /* HomeViewController.swift */,
 				4A8BA2C31C116A1E000EF64B /* PopoverViewController.swift */,
 				088EE56D1C1203D800517975 /* StoryContributionViewController.swift */,
-				4AEA150E1C12BEAA003A857C /* README */,
 				0827B25B1BF94D0600615A18 /* LaunchScreen.storyboard */,
 				0827B25E1BF94D0600615A18 /* Info.plist */,
 				4A21722B1C0FAEB000275BC3 /* Assets.xcassets */,
@@ -446,8 +446,8 @@
 				4A8BA2C11C1116E5000EF64B /* lisa.jpg in Resources */,
 				4AFB0B1D1C0FCB30001EC83B /* three_letters_c1.txt in Resources */,
 				4AFB0B1F1C0FCB30001EC83B /* three_letters_c3.txt in Resources */,
-				4AEA150F1C12BEAA003A857C /* README in Resources */,
 				4AE31CC41C0FC56D00CC21C0 /* old_ghosts_c1.txt in Resources */,
+				080C9C791C179771005032F0 /* README.txt in Resources */,
 				4AE31CC51C0FC56D00CC21C0 /* old_ghosts_c2.txt in Resources */,
 				4A8BA2BF1C1116D1000EF64B /* hannah.jpg in Resources */,
 				4AE31CC91C0FC57B00CC21C0 /* staring_me_in_the_face_c1.txt in Resources */,
