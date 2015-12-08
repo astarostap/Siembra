@@ -14,6 +14,7 @@ class PopoverViewController: UIViewController {
     
     var text: String = ""
     
+    // This function sets the story text in the popup segue view and is used by the profile view in its segue.
     func setStory(storyText: String?) {
         if storyText != nil {
             text = storyText!

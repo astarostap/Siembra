@@ -13,6 +13,7 @@ import ParseFacebookUtilsV4
 import MessageUI
 import AudioToolbox
 
+
 class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate  {
     
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -51,6 +52,9 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         var control: Int
         if (sender.on) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
             control = 1
             defaults.setObject(control, forKey: "vibrationMode")
         } else {
@@ -118,12 +122,12 @@ class UserSettingsViewController: UIViewController, FBSDKLoginButtonDelegate, MF
         self.performSegueWithIdentifier("SignIn", sender: sender)
     }
     
-    private func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         self.performSegueWithIdentifier("SuccessfullLogin", sender: nil)
     }
     
-    private func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
         
     }

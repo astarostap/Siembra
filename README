@@ -1,4 +1,56 @@
-BREADTH 
+STEPS TO USE SIEMBRA
+This step-by-step guide will tell you what features can be used from each screen. We have divided it in this way because we think it will be easier for you to understand. Each screen will have (1) the way it can be accessed and (2) all its features.
+
+Disclaimer: user must turn iCloud in XCode for iCloud features to work. 
+
+Home Screen
+-- Access: the first screen that is loaded on the app.
+-- Genre Collection View: this view has various genres which are clickable. Currently romance genre is the only genre with data stored in it, because all our Core Data stories are "romance" stories. Each collection view cell uses a blurred view. If a user presses a genre, they are brought to a table view that lists all stories for the genre.
+-- Educational Videos Collection View: this collection view has a series of educational topics, and each cell also uses a blurred view. If a user presses a video cell, then they are brought to a video screen.
+
+Video Screen
+-- Access: the screen that loads after a user presses on an educational video in the Home Screen.
+-- Activity Indicator: this shows that the video is loading until the video actually loads.
+-- Youtube Video: on this screen, there is a linked video that users can watch. If they click on play, then it opens in full screen. Also, if they press on the Safari icon, it will open Safari and the video on Youtube
+-- Interactive Feature :At the bottom of the screen, you will find an interactive feature that reflects our lighthearted to the concept of education. We want users to feel at ease when viewing their content. Here you will find a bouncing logo, and users will be able to draw lines by tapping on start and ending points. They are also able to delete all these lines by clicking on the trash can icon, if they so desire.
+
+Settings Screen
+-- Access: Can be accessed by tapping the top left icon in the navigation bar.
+-- Facebook Login: this allows users to log into facebook to be identified.
+-- Story font size stepper: this allows users to increase the font size for their stories to be easier to read.
+-- Vibration setting: turning this feature on will vibrate the phone for one second.
+-- Parental setting: we are planning on implementing this feature so that it filters the types of stories and educational stories available to users.
+-- Contact Us: this features allows users to fill in an email (both subject and actual text). Then, pressing send will open the email app with subject and text already filled in. This feature will not work on a simulator.
+
+Search Screen
+-- Access: can be accessed from the third icon in the tab bar at the bottom of the screen.
+-- Table View: this view is filled with stories, characters and users. Each cell has a name and a detailed subtitle.
+-- Each Table View Cell: each cell supports gestures. If users swipe left then they are able to (1) delete the entry or (2) share the entry on facebook or twitter. Each sharing action is also accompanied by an alert.
+-- Search Controller: users are able to type in search queries to search the database.
+-- Search Fragmented Control: users are also able to filter their search by using the segmented control, which filters by either Users, Characters, or Stories.
+
+Profile Screen
+-- Access: can be accessed from the heart icon in the bottom tab bar
+-- User information: a user's profile picture, user name and user characteristics are all listed on the profile screen.
+-- Best Story: a user's best story (as voted by the community) is posted on the screen through a button. If a user presses the button, a popover view appears with the text of the best story.
+-- Profile Picture: a user can change their profile picture by taking a picture using their device's camera or by going through pictures on their local camera roll.
+-- Map: a user's location on a map view is also pictured at the bottom of the profile view.
+
+Story View Screen
+-- Access: can be accessed either from the table view from genre search or from search items in the seach view in the tab.
+-- Story: the story is displayed in a scroll view. Each scroll view has one page of the story. The user can swipe left and right to view pages of the story but can also shake the phone to go to next page.
+-- Page Control: this shows which page the user is currently at; for stories that are too long, then it is difficult to see but if you go to the Return to Paradise it will be easier to see.
+-- Audio: Users are able to play a narrated version of the story by pressing a play button. They are also able to navigate the audio by pressing on the progress view, which allows them to rewind or go forward in the audio.
+-- Contribution Adder: in the top right of the screen, users are able to press a 'plus' button that takes them to a contribution adder. This screen will allow users to append their contribution to the end of this story.
+
+Contributon Adder View
+-- Access: can be accessed from the story view through the plus button at the top of the screen.
+-- iCloud Picker: allows users to choose files directly from their iCloud storage. Users are only able to select text files. When a user chooses a file, the text is extracted and added to the end of the chosen story. Also, users are alerted with a success alert.
+-- Time Picker: users are able to select a time (hours, minutes) and launch a challenge to other users. This challenge requires other users to submit a contribution to the story before the end of the chosen challenged time. Users are alerted when the challenge is created.
+-- Notificaiton: when the time expires and the challenge is over, users are sent a local notification on their device informing them that the challenge has ended.
+-- Record: if users click on record audio, then they are taken to a new controller where they can record their own audio and play it. If user wants to record, they press the big red button! We plan to make this feature richer by allowing users to attach this audio to stories and let other users vote on their narration.
+
+BREADTH
 Table View API
 -- We make heavy use of the Table View API for our search tab. We also heavily customize it by coloring cells with a fradient, allowing swipeable gestures such as sharing and deleting, and using customized detail subtitles.
 
@@ -24,9 +76,9 @@ Core Data
 -- Our app relies on Core Data. When first launched, hard-coded data is loaded into Core Data. Then, all required data about users, stories, characters are used when needed. For example, story descriptions are requested for the search table view, and story text is changed for added contributions.
 
 Animation API
--- We use drawRect and UIBehavior APIs in our Youtube Video page, where our logo playfully bounces off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well.
+-- We use drawRect and UIBehavior APIs in our Youtube Video page, where our logo playfully bounces (through a collision behavior) off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well.
 -- We also use UIBezierPath to let users draw lines in the the Youtube Video page by tapping in a start & end point.
-
+-- We used tap gestures in order to detect start and end points of each Bezier path.
 
 Image Picker API
 -- In our profile page, we allow users to pick their profile picture by going through their local photos. We make use of the UIImagePickerController and its delegate. 
@@ -61,13 +113,11 @@ Visual Effects
 
 
 
-
 MISCELLANEOUS
 
 -- Stepper: users can increase and decrease the font size in the UserSettingsViewController.
 -- UIView: we used a TapGesture in AudioViewController so that users can forward, rewind their audio by tapping on the progress view (likea regular audio player).
 -- Users can open the youtube videos on Safari too.
-
 
  
 NOT COVERED IN LECTURE 
@@ -121,7 +171,15 @@ TableView
 -- Allow swipe gestures on each cell
 -- Allow users to delete the search items 
 -- Allow users to share the entry through Facebook or Twitter
--- Color the cells in a pretty gradient 
+-- Color the cells in a pretty gradient
+
+ScrollView
+-- Story text is broken up so that each view will have a piece of the story inserted into a UITextView
+-- Used content offset to simulate story pages
+-- Used delegate functions (i.e. scrollViewDidEndDecelerating) to allows users to swipe through the pages
+-- When a user shakes, we must turn the page of the scroll view
+-- When a user swipes to next page, then the page control also updates
+-- When a user updates the font size, then the scroll view's views are also appropriately udpated with font size
 
 CREATIVITY  
 -- Our idea centers around giving women more control over their romantic and sexual lives by giving them stories to read and narrations to listen to

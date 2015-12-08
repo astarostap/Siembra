@@ -31,7 +31,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         }
     }
     
-    
+    // When users select one of the segemented controls, then repopulate the table to represent the new search elements
     @IBAction func searchSegmentedControl(sender: UISegmentedControl) {
         switch segmentedValue.selectedSegmentIndex {
         case 0:
@@ -65,6 +65,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     
     private var resultSearchController = UISearchController()
     
+    // Implements a delegate function that updates the search results when a user types in a search string. In order to do so, we must update the search array and each appropriate section.
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         // Filter the searchElements array using the filterMethod
         filteredSearchItems.removeAll(keepCapacity: false)
@@ -146,7 +147,8 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     
     // MARK: - Table view delegate 
     
-    func coloredCells(index: Int) -> UIColor {
+    // This function will calculate what strength color to return for each cell
+    private func coloredCells(index: Int) -> UIColor {
         var count = 0
         for array in originalSearchItems {
             count += array.count
@@ -183,7 +185,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         }
     }
 
-    
+    // This function will populate each table view cell with the appropriate information depending on if the cell is for a story, user or character.
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Chose the right array to populate the table view
@@ -238,6 +240,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     }
 
+    // This function make it possible for each cell to have sharing and deleting properties, by simply swiping. 
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
         // Gesture to share search items
