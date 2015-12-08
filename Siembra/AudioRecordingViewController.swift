@@ -17,6 +17,8 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     
+    var story: Story?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +51,16 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
         soundRecorder.prepareToRecord()
     }
     
-    //gets the file url where the sound recording will be saved
+    //gets the file url where the sound recording will be saved and sets the
+    //story's audio to the user's recording
     private func fileUrl() -> NSURL {
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as! [String]
         
-        let newFileName = "newRecording.m4a"
+        var newFileName = "newRecording.m4a"
+        if (story != nil) {
+            newFileName = String(story!.hash) + "newRecording.m4a"
+            story!.audioFileName = newFileName
+        }
         let path = paths[0].stringByAppendingPathComponent(newFileName)
         let url = NSURL(fileURLWithPath: path)
         return url

@@ -23,7 +23,6 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
         }
     }
     
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var videoUrl: String?
