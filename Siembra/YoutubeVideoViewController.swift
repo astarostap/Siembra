@@ -49,6 +49,7 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
             headerView.addLogo()
             headerView.startAnimation()
             headerView.setUpDrawingGestures()
+            headerView.startCoreMotion()
         }
         super.viewDidLoad()
     }

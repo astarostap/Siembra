@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class LogoHeaderGameUIView: UIView {
 
@@ -16,6 +17,8 @@ class LogoHeaderGameUIView: UIView {
     
     private var logoView: UIImageView = UIImageView()
     
+    var movementManager = CMMotionManager()
+    
     var lines = [UIBezierPath]()
     
     func clean() {
@@ -23,14 +26,23 @@ class LogoHeaderGameUIView: UIView {
         self.setNeedsDisplay()
     }
     
-    private var paddle: UIView = UIView()
-    
     func addLogo() {
         let logoImage = UIImage(named: "29pt_logo.png")
         logoView = UIImageView()
         logoView.image = logoImage
         logoView.frame = CGRectMake(self.bounds.size.width / 2 - 30, 10 , logoImage!.size.width, logoImage!.size.height)
         addSubview(logoView)
+    }
+    
+    func startCoreMotion() {
+        movementManager.gyroUpdateInterval = 0.2
+        movementManager.accelerometerUpdateInterval = 0.2
+        movementManager.startGyroUpdatesToQueue(NSOperationQueue.currentQueue()!) { (gyroData: CMGyroData?, NSError) -> Void in
+            print(gyroData!.rotationRate)
+            if(NSError != nil) {
+                print("\(NSError)")
+            }
+        }
     }
     
     override func drawRect(rect: CGRect) {
