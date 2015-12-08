@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Siembra
 //
-//  Created by Quentin Perrot on 12/3/15.
+//  Created by Abraham Starosta on 12/7/15.
 //  Copyright © 2015 Abraham Starosta. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,7 +19,7 @@ extension User {
     @NSManaged var name: String?
     @NSManaged var contributions: NSSet?
     @NSManaged var narrationPlaylist: NSSet?
-    @NSManaged var storyLikes: NSSet?
     @NSManaged var publications: NSSet?
+    @NSManaged var storyLikes: NSSet?
 
 }

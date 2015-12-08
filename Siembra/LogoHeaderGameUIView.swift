@@ -34,6 +34,7 @@ class LogoHeaderGameUIView: UIView {
         addSubview(logoView)
     }
     
+    //doesn't really do much at this point
     func startCoreMotion() {
         movementManager.gyroUpdateInterval = 0.2
         movementManager.accelerometerUpdateInterval = 0.2

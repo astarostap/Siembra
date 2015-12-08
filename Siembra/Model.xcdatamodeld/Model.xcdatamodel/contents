@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Xcode 7.0">
     <entity name="Character" representedClassName=".Character" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,6 +13,7 @@
         <relationship name="writer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="contributions" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Story" representedClassName=".Story" syncable="YES">
+        <attribute name="audioFileName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="authorName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
@@ -41,7 +42,7 @@
     <elements>
         <element name="Character" positionX="270" positionY="-18" width="128" height="103"/>
         <element name="Contribution" positionX="-369" positionY="92" width="128" height="88"/>
-        <element name="Story" positionX="79" positionY="146" width="128" height="268"/>
+        <element name="Story" positionX="79" positionY="146" width="128" height="283"/>
         <element name="User" positionX="-119" positionY="-72" width="128" height="148"/>
     </elements>
 </model>

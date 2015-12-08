@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-//inspired by https://www.youtube.com/watch?v=rcVv1N1hReQ
+//webview showing the youtube videos inspired by https://www.youtube.com/watch?v=rcVv1N1hReQ
 class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var videoView: UIWebView!
@@ -22,7 +22,6 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
             headerView.clean()
         }
     }
-    
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
@@ -54,6 +53,7 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
     }
     
+    //load the youtube video in the webview
     override func viewDidAppear(animated: Bool) {
         let embedHtml = "<iframe width=\"\(videoView.frame.width)\" height=\"\(videoView.frame.height)\" src=\"\(videoUrl!)/playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
         videoView.loadHTMLString(embedHtml, baseURL: nil)
