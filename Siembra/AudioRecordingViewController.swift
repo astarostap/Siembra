@@ -50,7 +50,7 @@ class AudioRecordingViewController: UIViewController, AVAudioRecorderDelegate, A
     
     //gets the file url where the sound recording will be saved
     private func fileUrl() -> NSURL {
-        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as! [String]
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         
         let newFileName = "newRecording.m4a"
         let path = paths[0].stringByAppendingPathComponent(newFileName)
