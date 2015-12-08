@@ -1,6 +1,6 @@
 BREADTH 
 Table View API
--- We make heavy use of the Table View API for our search tab. We also heavily customize it by coloring cells with a fradient, allowing swipeable gestures such as sharing and deleting, and using customized detail subtitles. 
+-- We make heavy use of the Table View API for our search tab. We also heavily customize it by coloring cells with a fradient, allowing swipeable gestures such as sharing and deleting, and using customized detail subtitles.
 
 Collection View API
 -- We use the collection view in the Home tab and allow users to seamlessly swipe across the screen. 
@@ -24,7 +24,8 @@ Core Data
 -- Our app relies on Core Data. When first launched, hard-coded data is loaded into Core Data. Then, all required data about users, stories, characters are used when needed. For example, story descriptions are requested for the search table view, and story text is changed for added contributions.
 
 Animation API
--- We use this API in our Home page, where our logo playfully bounces off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well. 
+-- We use drawRect and UIBehavior APIs in our Youtube Video page, where our logo playfully bounces off the sides of the bounds. We do this because our app is meant to be lighthearted, and this conveys the point well.
+-- We also use UIBezierPath to let users draw lines in the the Youtube Video page by tapping in a start & end point.
 
 
 Image Picker API
@@ -52,10 +53,20 @@ Progress View
 -- We make use of the progress view in our story view when we play a story's narration. This is a very aesthetic addtiion to the page, and makes the view come to life. 
 
 NSUserDefaults
--- For all our settings, we make heavy use of defaults to make sure that users have a consistent experience throughout. We save font size, parental control and vibration mode settings. 
+-- For all our settings, we make heavy use of defaults to make sure that users have a consistent experience throughout. We save font size, parental control and vibration mode settings.
+
+Visual Effects
+-- We used blurred visual effects for every screen's background. In addition, we used blurred effect for the collection view cells in the home screen where we include
+    the cell's text.
+
+
+
 
 MISCELLANEOUS
 
+-- Stepper: users can increase and decrease the font size in the UserSettingsViewController.
+-- UIView: we used a TapGesture in AudioViewController so that users can forward, rewind their audio by tapping on the progress view (likea regular audio player).
+-- Users can open the youtube videos on Safari too.
 
 
  
@@ -74,7 +85,8 @@ Social API
 -- We make use of this API in the search table view, in order to allow users to swipe on entries and to share them either with Facebook or Twitter. 
 
 AVFoundation API
--- This API is also central, as it allows us to play story narrations in our story view. Users are able to not only read romantic stories but also listen to a professional narrator. 
+-- This API is also central, as it allows us to play story narrations in our story view. By leveraging the AVAPlayer API, users are able to not only read romantic stories but also listen to a professional narrator.
+-- We also used the AVARecorder API so that users can also record their own narrations for a story.
 
 Camera API
 -- In the profile view, we make use of the UIImagePickerController and thus the camera to allow users to take profile pictures of themselves. 

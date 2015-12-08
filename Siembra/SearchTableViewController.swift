@@ -2,7 +2,7 @@
 //  SearchTableViewController.swift
 //  Siembra
 //
-//  Created by Abraham Starosta on 11/16/15.
+//  Created by Quentin Perrot on 11/16/15.
 //  Copyright © 2015 Abraham Starosta. All rights reserved.
 //
 

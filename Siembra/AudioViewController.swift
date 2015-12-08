@@ -111,7 +111,14 @@ class AudioViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
     }
     
     func formatAttributedText(text: String) -> NSAttributedString {
-        let storyFont:UIFont = UIFont(name: "Arial", size: 20)!
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var fontSize = 20
+        if let value = defaults.objectForKey("fontSize") as? Int {
+            fontSize = value
+        }
+        
+        
+        let storyFont:UIFont = UIFont(name: "Arial", size: CGFloat(fontSize))!
         let attributes = [
             NSForegroundColorAttributeName : UIColor.blackColor(),
             NSFontAttributeName: storyFont

@@ -26,10 +26,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.pagingEnabled = true
         collectionView.scrollEnabled = true
-        if let headerView = homeHeaderView as? LogoHeaderGameUIView {
-            headerView.addLogo()
-            //headerView.startAnimation()
-        }
     }
 
     private struct Storyboard {

@@ -10,6 +10,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
+    //sets up tab bar appearance
     override func viewDidLoad() {
         super.viewDidLoad()
         //Tab bar appearance

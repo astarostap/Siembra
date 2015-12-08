@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 
+//inspired by https://www.youtube.com/watch?v=rcVv1N1hReQ
 class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var videoView: UIWebView!
@@ -16,6 +17,11 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var gameView: UIView!
 
+    @IBAction func cleanDrawings(sender: UIButton) {
+        if let headerView = gameView as? LogoHeaderGameUIView {
+            headerView.clean()
+        }
+    }
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -42,6 +48,7 @@ class YoutubeVideoViewController: UIViewController,UIWebViewDelegate {
         if let headerView = gameView as? LogoHeaderGameUIView {
             headerView.addLogo()
             headerView.startAnimation()
+            headerView.setUpDrawingGestures()
         }
         super.viewDidLoad()
     }
