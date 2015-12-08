@@ -1301,7 +1301,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wHW-3e-4WQ">
-                                <rect key="frame" x="14" y="80" width="125" height="74"/>
+                                <rect key="frame" x="14" y="80" width="125" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Font Size: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-ff-EGe">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
@@ -1310,8 +1310,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vibrations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-5b-cYO">
+                                        <rect key="frame" x="0.0" y="54" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parental Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgE-5Q-pxS">
-                                        <rect key="frame" x="0.0" y="54" width="111" height="21"/>
+                                        <rect key="frame" x="0.0" y="107" width="111" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1321,7 +1327,7 @@
                                 <animations/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-zW-tDi">
-                                <rect key="frame" x="213" y="80" width="94" height="80"/>
+                                <rect key="frame" x="213" y="80" width="94" height="131"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FM3-hp-X9P">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
@@ -1331,8 +1337,14 @@
                                             <action selector="stepperAction:" destination="mTx-P8-NRo" eventType="valueChanged" id="EPt-hn-AUC"/>
                                         </connections>
                                     </stepper>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-iA-Lwb">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zh1-MP-Qvc">
                                         <rect key="frame" x="45" y="49" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="vibrationSwitchAction:" destination="mTx-P8-NRo" eventType="valueChanged" id="He8-Dt-d3J"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-iA-Lwb">
+                                        <rect key="frame" x="45" y="100" width="51" height="31"/>
                                         <animations/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -1382,6 +1394,7 @@
                         <outlet property="parentalSwitch" destination="p6T-iA-Lwb" id="Law-eZ-IJ9"/>
                         <outlet property="stepper" destination="FM3-hp-X9P" id="exG-mC-H3v"/>
                         <outlet property="subject" destination="0bw-Hz-Ahq" id="VE9-8x-Lyd"/>
+                        <outlet property="vibrationSwitch" destination="Zh1-MP-Qvc" id="5gX-6f-Wh4"/>
                         <segue destination="zfA-Vp-GSm" kind="modal" identifier="SuccessfullLogin" id="8j4-15-bbR"/>
                     </connections>
                 </viewController>

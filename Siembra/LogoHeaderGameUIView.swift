@@ -23,6 +23,8 @@ class LogoHeaderGameUIView: UIView {
         self.setNeedsDisplay()
     }
     
+    private var paddle: UIView = UIView()
+    
     func addLogo() {
         let logoImage = UIImage(named: "29pt_logo.png")
         logoView = UIImageView()
